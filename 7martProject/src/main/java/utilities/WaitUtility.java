@@ -18,7 +18,7 @@ public class WaitUtility
 	 
 		public static final long IMPLICIT_WAIT = 10;
 		public static final long PAGE_LOAD_WAIT = 20;
-		public static final long EXPLICIT_WAIT = 50;
+		public static final long EXPLICIT_WAIT = 10;
 		public static final long FLUENT_WAIT = 30;
 		public static final long POLLING_WAIT = 5;
 		

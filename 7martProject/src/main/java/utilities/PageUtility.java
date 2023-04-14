@@ -128,10 +128,7 @@ public class PageUtility
 			element.click();
 		}
 
-		public void mediumDelay(int x) throws InterruptedException {
-			Thread.sleep(x);
-		}
-
+		
 		public void selectFuncbyindex(WebElement element, int index) {
 			Select select = new Select(element);
 			select.selectByIndex(index);
