@@ -5,16 +5,12 @@ import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.obsqura.pages.LoginPage;
-
-import bsh.org.objectweb.asm.Constants;
 import utilities.ExcelUtility;
 import utilities.FakerUtility;
-import utilities.WaitUtility;
+
 
 public class LoginPageTest extends Base
 {
@@ -42,16 +38,20 @@ public class LoginPageTest extends Base
 		String expectedAlertMessage = ExcelUtility.getString(12, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "loginPage");
 		String username = FakerUtility.firstName();
 		String password = ExcelUtility.getString(4, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "loginPage");
+		loginpage = new LoginPage(driver);
 		loginpage.enterTextinUsernameField(username);
 		loginpage.enterTextinpasswordField(password);
+		assertTrue(loginpage.isSigninButtonEnabled(),"Sign in button is not enabled");
 		loginpage.clickSigninButton();
-		assertEquals(expectedAlertMessage, loginpage.textofAlertMessage(),"Proper alert is not shown");
+		loginpage.alertMessage();
+		System.out.println(loginpage.alertMessage());
+		assertEquals(expectedAlertMessage,loginpage.alertMessage(),"Proper alert is not shown");
 		
 	}
 	@Test
 	public void verifyLoginwithValidUsernameAndPassword() throws IOException
 	{
-		String titleofDashboard = ExcelUtility.getString(8, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "loginPage");
+		String titleofDashboard = ExcelUtility.getString(10, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "loginPage");
 		String username = ExcelUtility.getString(3, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "loginPage");
 		String password = ExcelUtility.getString(4, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "loginPage");
 		loginpage = new LoginPage(driver);
@@ -70,5 +70,6 @@ public class LoginPageTest extends Base
 	            {"admin","rev" },	
 	            { "admin","admin"}
 	    	};
-	    }
+	}
+	
 }

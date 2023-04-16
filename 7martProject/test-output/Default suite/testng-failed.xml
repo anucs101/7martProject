@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsqura.testscripts.LoginPageTest">
+      <class name="com.obsqura.testscripts.ManageProductTest">
         <methods>
+          <include name="verifyColorChangeofStockUnlimitedButtontoLimited"/>
           <include name="initializeBrowser"/>
-          <include name="verifyLoginwithValidUsernameAndPassword"/>
+          <include name="test"/>
           <include name="browserQuit"/>
         </methods>
-      </class> <!-- com.obsqura.testscripts.LoginPageTest -->
+      </class> <!-- com.obsqura.testscripts.ManageProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

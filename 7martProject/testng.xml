@@ -7,15 +7,24 @@
   <test thread-count="5" name="Test">
 	<parameter name="browser" value="chrome"></parameter>
     <classes>
-      <!-- <class name="com.obsqura.testscripts.LoginPageTest">
+      <class name="com.obsqura.testscripts.LoginPageTest">
 		<methods>
 			<exclude name = "verifylogin"/>
-			<include name = "verifyLoginwithValidUsernameAndPassword"/>
+			<exclude name = "verifyAlertMessageWithInvalidUsernameAndValidPassword"/>
+			<exclude name = "verifyLoginwithValidUsernameAndPassword"/>
 		</methods>
-	</class>-->
-	<class name ="com.obsqura.testscripts.ManagePagesTest"/>
-	<class name ="com.obsqura.testscripts.ManageProductTest"/>
-	<class name ="com.obsqura.testscripts.ManageDeliveryBoyTest"/>
+	</class>
+	<class name ="com.obsqura.testscripts.ManageDeliveryBoyTest">
+		<methods>
+			<include name = "verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage"/>
+		</methods>
+	</class>
+	<class name ="com.obsqura.testscripts.ManageProductTest">
+		<methods>
+			<exclude name = "verifyColorChangeofStockUnlimitedButtontoLimited"/>
+		</methods>
+	</class>
+<!-- <class name ="com.obsqura.testscripts.ManagePagesTest"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

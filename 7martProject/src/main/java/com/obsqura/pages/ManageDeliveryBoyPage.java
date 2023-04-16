@@ -16,16 +16,10 @@ public class ManageDeliveryBoyPage
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(xpath="//p[text()='Manage Delivery Boy']")
-	WebElement ManageDeliveryBoy;
 	
 	@FindBy(xpath="//h1[text()='List Delivery Boy']")
 	WebElement TitleFieldOfManageDeliveryBoyPage;
 	
-	public void clickManageDeliveryBoy()
-	{
-		PageUtility.clickOnElement(ManageDeliveryBoy);
-	}
 	
 	public String titleofDeliveryBoyPage()
 	{

@@ -26,6 +26,9 @@ public class LoginPage
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement signinButton;
 	
+	@FindBy(xpath="//div[contains(@class,'alert')]")
+	WebElement alertmessageElement;
+	
 	public void enterTextinUsernameField(String username)
 	{
 		PageUtility.enterText(usernameField, username);
@@ -40,8 +43,7 @@ public class LoginPage
 	{
 		
 		PageUtility.clickOnElement(signinButton);
-//		WaitUtility.waitForelementToBeSelected(driver, signinButton);
-		
+	
 	}
 	
 	public String getUrlOfDashboard()
@@ -71,6 +73,11 @@ public class LoginPage
 	public boolean isSigninButtonEnabled()
 	{
 		return PageUtility.isElementDisplayed(passwordField);
+	}
+	
+	public String alertMessage()
+	{
+		return PageUtility.getElementText(alertmessageElement);
 	}
 	
 	

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class ManageProductPage 
 
@@ -31,6 +32,7 @@ public class ManageProductPage
 	
 	public void clickManageProduct()
 	{
+		WaitUtility.waitForElementIsPresent(driver, ManageProduct);
 		PageUtility.clickOnElement(ManageProduct);
 	}
 	
