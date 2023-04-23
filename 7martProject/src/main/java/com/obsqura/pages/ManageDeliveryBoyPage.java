@@ -20,6 +20,11 @@ public class ManageDeliveryBoyPage
 	@FindBy(xpath="//h1[text()='List Delivery Boy']")
 	WebElement TitleFieldOfManageDeliveryBoyPage;
 	
+	@FindBy(xpath="//a[@onclick='click_button(1)']")
+	WebElement newButton;
+	
+	@FindBy(xpath="//input[@id='name']")
+	WebElement nameFiled;
 	
 	public String titleofDeliveryBoyPage()
 	{

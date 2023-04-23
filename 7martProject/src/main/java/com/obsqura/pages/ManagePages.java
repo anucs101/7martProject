@@ -1,5 +1,7 @@
 package com.obsqura.pages;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -8,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.ExcelUtility;
 import utilities.PageUtility;
 import utilities.WaitUtility;
 
@@ -24,6 +27,21 @@ public class ManagePages
 	@FindBy(xpath ="//a[@onclick='click_button(1)']")
 	WebElement newButton;
 	
+	@FindBy(xpath ="//a[@onclick='click_button(2)']")
+	WebElement searchButton;
+	
+	@FindBy(xpath ="//input[@type='text']")
+	WebElement titleFieldforSearch;
+	
+	@FindBy(xpath ="//button[@name='Search']")
+	WebElement searchButtoninSearchListPages;
+	
+	@FindBy(xpath ="//table[contains(@class,'table')]//tr//td")
+	List<WebElement> listtableElements;
+	
+	@FindBy(xpath ="//table[contains(@class,'table')]//tr//td")
+	List<WebElement> listAfterSearch;
+	
 	
 	
 	public String backgroundColorOfNewButton()
@@ -32,26 +50,42 @@ public class ManagePages
 		return PageUtility.getCssValueofElement(newButton, "background-color");
 	}
 	
-	
-	public void listOfCategoriesinDashboard(String selectPage)
+	public void clickSearchButton()
 	{
-			
-		List<WebElement> Categories = driver.findElements(By.xpath("//ul[@class='nav nav-treeview']//p"));
-		for(WebElement category:Categories)
+		searchButton.click();
+	}
+	
+	public void enterTextinTitleFieldForSearch() throws IOException
+	{
+		PageUtility.enterText(titleFieldforSearch, ExcelUtility.getString(4, 1,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"ManagePage"));
+	}
+	
+	public void clickSearchButtoninSearchListPages()
+	{
+		searchButtoninSearchListPages.click();
+	}
+	
+	public List<String> listOfValuesinTable()
+	{
+		List<String> listTableValues = new ArrayList<String>();
+		for(WebElement value:listtableElements)
 		{
-			if(category.getText().equals(selectPage))
-			{
-				category.click();
-				break;
-			}
-				
+			listTableValues.add(value.getText());
 		}
+		return listTableValues;
 	}
 	
-	public void selectManagePage()
+	public List<String> listOfValuesinTableAfterSearch()
 	{
-		listOfCategoriesinDashboard("Manage Pages");
+		List<String> listTableValuesAfterSerach = new ArrayList<String>();
+		for(WebElement value:listAfterSearch)
+		{
+			listTableValuesAfterSerach.add(value.getText());
+		}
+		return listTableValuesAfterSerach;
 	}
+	
+	
 	
 
 }

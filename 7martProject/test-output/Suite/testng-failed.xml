@@ -7,13 +7,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.obsqura.testscripts.ManageProductTest">
+      <class name="com.obsqura.testscripts.ManageUsersTest">
         <methods>
-          <include name="verifyColorChangeofStockUnlimitedButtontoLimited"/>
           <include name="initializeBrowser"/>
+          <include name="verifyBackGroundColorOfAlert"/>
           <include name="browserQuit"/>
         </methods>
-      </class> <!-- com.obsqura.testscripts.ManageProductTest -->
+      </class> <!-- com.obsqura.testscripts.ManageUsersTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

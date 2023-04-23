@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageUsersTest" class="method navigator-link" hash-for-method="verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow">verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -105,6 +119,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManageUsersTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow">
+                  </a> <!-- verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow -->
+                  <span class="method-name">verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -121,23 +150,17 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.obsqura.testscripts.LoginPageTest&quot;&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManagePagesTest&quot;&gt;
         &lt;methods&gt;
-          &lt;exclude name=&quot;verifylogin&quot;/&gt;
-          &lt;exclude name=&quot;verifyAlertMessageWithInvalidUsernameAndValidPassword&quot;/&gt;
-          &lt;exclude name=&quot;verifyLoginwithValidUsernameAndPassword&quot;/&gt;
+          &lt;exclude name=&quot;verifyBackgroundColorOfNewButton&quot;/&gt;
+          &lt;exclude name=&quot;verifySearchfunctinalityworksandShowCorrespondingRows&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.obsqura.testscripts.LoginPageTest --&gt;
-      &lt;class name=&quot;com.obsqura.testscripts.ManageDeliveryBoyTest&quot;&gt;
+      &lt;/class&gt; &lt;!-- com.obsqura.testscripts.ManagePagesTest --&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManageUsersTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage&quot;/&gt;
+          &lt;include name=&quot;verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.obsqura.testscripts.ManageDeliveryBoyTest --&gt;
-      &lt;class name=&quot;com.obsqura.testscripts.ManageProductTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;exclude name=&quot;verifyColorChangeofStockUnlimitedButtontoLimited&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.obsqura.testscripts.ManageProductTest --&gt;
+      &lt;/class&gt; &lt;!-- com.obsqura.testscripts.ManageUsersTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -151,7 +174,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (3 classes)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,12 +200,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow')
+data.setCell(0, 2, 'com.obsqura.testscripts.ManageUsersTest')
+data.setCell(0, 3, 2359);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -197,24 +224,22 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.obsqura.testscripts.LoginPageTest</span>
+              <span class="ignored-class-name">com.obsqura.testscripts.ManagePagesTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyLoginwithValidUsernameAndPassword</span>
+                <span class="ignored-method-name">verifySearchfunctinalityworksandShowCorrespondingRows</span>
                 <br/>
-                <span class="ignored-method-name">verifylogin</span>
-                <br/>
-                <span class="ignored-method-name">verifyAlertMessageWithInvalidUsernameAndValidPassword</span>
+                <span class="ignored-method-name">verifyBackgroundColorOfNewButton</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.obsqura.testscripts.ManageProductTest</span>
+              <span class="ignored-class-name">com.obsqura.testscripts.ManageUsersTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyColorChangeofStockUnlimitedButtontoLimited</span>
+                <span class="ignored-method-name">verifyBackGroundColorOfAlert</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -225,6 +250,20 @@ return data;
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.ManageUsersTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow</span>
+                <span class="method-start">8364 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow status=SUCCESS method...)</span>
+                <span class="method-start">10727 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -43,7 +43,9 @@ public class ManageProductPage
 	
 	public void clickUnlimitedButton()
 	{
+		WaitUtility.waitForElementClickable(driver, unlimitedButton);
 		PageUtility.clickOnElement(unlimitedButton);
+		
 	}
 	
 	public String colorOfUnlimitedButton()
@@ -53,6 +55,11 @@ public class ManageProductPage
 	public String colorOflimitedButton()
 	{
 		return PageUtility.getCssValueofElement(limitedButton, "background-color");
+	}
+	
+	public String ManageproductPageUrl()
+	{
+		return driver.getCurrentUrl();
 	}
 
 }

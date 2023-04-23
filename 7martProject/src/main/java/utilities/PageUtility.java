@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -28,7 +29,16 @@ public class PageUtility
 		public static String getElementText(WebElement element) {
 			return element.getText();
 		}
-
+		
+		public static String getAttributeOfhref(WebElement element)
+		{
+			return element.getAttribute("href");
+		}
+		
+		public static Point location(WebElement element)
+		{
+			return element.getLocation();
+		}
 		public static void clickAndHoldOnElement(WebElement element, WebDriver driver) {
 			Actions actions = new Actions(driver);
 			actions.clickAndHold(element).build().perform();
@@ -42,6 +52,13 @@ public class PageUtility
 		public static void selectDropdownbyIndex(WebElement element, int index) {
 			Select select = new Select(element);
 			select.selectByIndex(index);
+		}
+		
+		public static List<WebElement> selectOptionsList(WebElement element)
+		{
+			Select select = new Select(element);
+			List<WebElement> selectOptionsList = select.getOptions();
+			return selectOptionsList;
 		}
 
 

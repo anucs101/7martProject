@@ -15,7 +15,8 @@ package com.obsqura.testscripts;
 	import com.aventstack.extentreports.ExtentTest;
 	import com.aventstack.extentreports.Status;
 
-import utilities.ExtentReportUtility;
+import utilities.ExtendReportUtility;
+
 
 	
 
@@ -23,7 +24,7 @@ import utilities.ExtentReportUtility;
 	{
 	ExtentTest test;
 
-	ExtentReports extent=ExtentReportUtility.createExtentReports();
+	ExtentReports extent=ExtendReportUtility.createExtentReports();
 	ThreadLocal<ExtentTest> extentTest =new ThreadLocal<ExtentTest>();
 
 

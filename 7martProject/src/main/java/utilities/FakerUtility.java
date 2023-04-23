@@ -1,5 +1,6 @@
 package utilities;
 
+import com.github.javafaker.Currency;
 import com.github.javafaker.Faker;
 
 public class FakerUtility 
@@ -26,4 +27,15 @@ public class FakerUtility
 		Faker faker = new Faker();
 		return faker.bothify("????###@gmail.com");
 	 }
+	 
+	 public static String percentage() {
+		Faker faker = new Faker();
+		return faker.bothify("##");
+	}
+	 
+	 public static String amount() {
+			Faker faker = new Faker();
+			return faker.numerify("###");
+	}
+	 
 }

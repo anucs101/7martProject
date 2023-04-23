@@ -18,18 +18,18 @@ public class DashboardPageSelector
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(xpath="//div[@class='row']//p")
+	@FindBy(xpath="//a[text()='More info ']")
 	List<WebElement> pages;
 	
-	public void navigateToPageFromDashboard(String pageText)
+	public void navigateToPageFromDashboard(String pageLink)
 	{
 	for(WebElement page : pages)
 	{
-		if(PageUtility.getElementText(page).equals(pageText))
-				{
-				PageUtility.clickOnElement(page);
-				break;
-				}
+		if(PageUtility.getAttributeOfhref(page).equals(pageLink))
+		{
+		PageUtility.clickOnElement(page);
+		break;
+		}
 	}
 	}
 }

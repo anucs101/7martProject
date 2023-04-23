@@ -8,14 +8,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import constants.Constants;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.ScreenShotUtility;
 import utilities.WaitUtility;
 
@@ -60,23 +61,28 @@ public class Base
 		}
 		if(browser.equalsIgnoreCase("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +constants.Constants.FIREFOXDRIVERFILE);
-			driver = new FirefoxDriver();
+			driver = WebDriverManager.firefoxdriver().create();
+		
 		}
 			
 		else if(browser.equalsIgnoreCase("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+Constants.CHROMEDRIVERFILE);
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--remote-allow-origins=*");
-			driver = new ChromeDriver(options);
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.addArguments("--remote-allow-origins=*");
+			WebDriverManager.chromedriver().create();
+			driver = new ChromeDriver(chromeOptions);
+			
 		}
 			
 		else if(browser.equalsIgnoreCase("Edge"))
 		{
 			
-			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") +constants.Constants.EDGEDRIVERFILE);
-			driver = new EdgeDriver();
+			
+			EdgeOptions edgeOptions = new EdgeOptions();
+			edgeOptions.addArguments("--remote-allow-origins=*");
+			WebDriverManager.edgedriver().create();
+			driver = new EdgeDriver(edgeOptions);
+			
 		}
 		else
 		{
