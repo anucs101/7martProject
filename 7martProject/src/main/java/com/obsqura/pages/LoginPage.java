@@ -77,6 +77,7 @@ public class LoginPage
 	
 	public String alertMessage()
 	{
+		WaitUtility.waitForElement(driver, alertmessageElement);
 		return PageUtility.getElementText(alertmessageElement);
 	}
 	

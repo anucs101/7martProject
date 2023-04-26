@@ -69,7 +69,7 @@ public class Base
 		{
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--remote-allow-origins=*");
-			WebDriverManager.chromedriver().create();
+			WebDriverManager.chromedriver().capabilities(chromeOptions).create();
 			driver = new ChromeDriver(chromeOptions);
 			
 		}
@@ -80,7 +80,7 @@ public class Base
 			
 			EdgeOptions edgeOptions = new EdgeOptions();
 			edgeOptions.addArguments("--remote-allow-origins=*");
-			WebDriverManager.edgedriver().create();
+			WebDriverManager.edgedriver().capabilities(edgeOptions).create();
 			driver = new EdgeDriver(edgeOptions);
 			
 		}

@@ -28,7 +28,6 @@ public class LoginPageTest extends Base
 		loginpage.enterTextinpasswordField(password);
 		assertTrue(loginpage.isSigninButtonEnabled(),"Sign in button is not enabled");
 		loginpage.clickSigninButton();
-		System.out.println(loginpage.getTitleOfDashBoard());
 		assertEquals(titleofDashboard,loginpage.getTitleOfDashBoard(),"Invalid Username/Password");
 		
 	}
@@ -44,7 +43,6 @@ public class LoginPageTest extends Base
 		assertTrue(loginpage.isSigninButtonEnabled(),"Sign in button is not enabled");
 		loginpage.clickSigninButton();
 		loginpage.alertMessage();
-		System.out.println(loginpage.alertMessage());
 		assertEquals(expectedAlertMessage,loginpage.alertMessage(),"Proper alert is not shown");
 		
 	}

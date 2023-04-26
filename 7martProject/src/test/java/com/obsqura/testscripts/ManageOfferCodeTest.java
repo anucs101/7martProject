@@ -25,7 +25,7 @@ public class ManageOfferCodeTest extends Base
 	ManageOfferCodePage manageoffercodepage;
 	Login login;
 	DashboardPageSelector dashboardpageselector;
-	@Test
+	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully() throws IOException
 	{
 		String expectedAlert = ExcelUtility.getString(2, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"ManageOffercode");
@@ -34,13 +34,7 @@ public class ManageOfferCodeTest extends Base
 		manageoffercodepage = new ManageOfferCodePage(driver);
 		dashboardpageselector =new DashboardPageSelector(driver);
 		dashboardpageselector.navigateToPageFromDashboard(ExcelUtility.getString(2, 1,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"Dashboard"));
-		manageoffercodepage.clicknewButton();
-		manageoffercodepage.enterTextInofferCodeTextField();
-		manageoffercodepage.selectfirstOrderUserRadioButtonYes();
-		manageoffercodepage.enterTextInpercentageTextField();
-		manageoffercodepage.enterTextInamountTextField();
-		manageoffercodepage.enterTextIndescriptionTextField();
-		manageoffercodepage.clickSaveButton();
+		manageoffercodepage.clicknewButton().enterTextInofferCodeTextField().selectfirstOrderUserRadioButtonYes().enterTextInpercentageTextField().enterTextInamountTextField().enterTextIndescriptionTextField().uploadImage();
 		assertEquals(expectedAlert,manageoffercodepage.alertElementText(),"New offercode cannot be created");
 	}
 	

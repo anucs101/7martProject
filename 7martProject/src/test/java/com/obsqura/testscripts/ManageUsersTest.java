@@ -19,7 +19,7 @@ public class ManageUsersTest extends Base
 	Login login;
 	SelectMenu selectmenu;
 	ManageUsersPage manageuserspage;
-	@Test
+	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow() throws IOException
 	{
 		login = new Login(driver);
@@ -30,7 +30,7 @@ public class ManageUsersTest extends Base
 		manageuserspage.clickPasswordButton();
 		assertTrue(manageuserspage.passwordFieldisPresent(),"Could not open password field when clicking password button");
 	}
-	@Test
+	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyBackGroundColorOfAlert() throws IOException
 	{
 		String expectedBackgroundColorOfAlert = ExcelUtility.getString(1, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "Manageuser");
@@ -40,8 +40,7 @@ public class ManageUsersTest extends Base
 		selectmenu = new SelectMenu(driver);
 		selectmenu.navigateToPage(ExcelUtility.getString(8, 0, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
 		manageuserspage.clickActiveButton();
-		System.out.println(manageuserspage.backgroundColorOfAlert());
-		//assertEquals(expectedBackgroundColorOfAlert,manageuserspage.backgroundColorOfAlert(),"Background color of alert is not green");
+		assertEquals(expectedBackgroundColorOfAlert,manageuserspage.backgroundColorOfAlert(),"Background color of alert is not green");
 		
 	
 	}

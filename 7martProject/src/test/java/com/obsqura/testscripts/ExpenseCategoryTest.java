@@ -15,20 +15,19 @@ public class ExpenseCategoryTest extends Base
 	SelectMenu selectmenu;
 	ExpenseCategoryPage expensecategorypage;
 	
-	@Test
+	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyRowCountofExpenseCategoryTable() throws IOException
 	{
-		String expectedNumberOfRows = ExcelUtility.getNumeric(0, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ExpenseCategory");
+		int expectedNumberOfRows = ExcelUtility.getNumericValue(7, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ExpenseCategory");
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
 		expensecategorypage= new ExpenseCategoryPage(driver);
 		selectmenu = new SelectMenu(driver);
 		selectmenu.navigateToPage(ExcelUtility.getString(7, 0, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
 		selectmenu.navigateToPage(ExcelUtility.getString(7, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
-		//System.out.println(expensecategorypage.numberOfRows());
 		assertEquals(expectedNumberOfRows,expensecategorypage.numberOfRows(),"Number of Rows are Wrong in a page");
 	}
-	@Test
+	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyWidthOfActionColumn() throws IOException
 	{
 		String expectedWidthofActionColumn = ExcelUtility.getString(2, 2, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ExpenseCategory");
@@ -38,9 +37,21 @@ public class ExpenseCategoryTest extends Base
 		selectmenu = new SelectMenu(driver);
 		selectmenu.navigateToPage(ExcelUtility.getString(7, 0, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
 		selectmenu.navigateToPage(ExcelUtility.getString(7, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
-		//System.out.println();
 		assertEquals(expectedWidthofActionColumn,expensecategorypage.widthOfActionColumn(),"Width of action column is wrong");
 		}
+	@Test(retryAnalyzer = generaltests.Retry.class)
+	public void verifyAddingExpenseCategoryInformationswithDuplicateTitle() throws IOException
+	{
+		String expectedAlert = ExcelUtility.getString(6, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ExpenseCategory");
+		login = new Login(driver);
+		login.verifyLoginwithValidcredentials();
+		expensecategorypage= new ExpenseCategoryPage(driver);
+		selectmenu = new SelectMenu(driver);
+		selectmenu.navigateToPage(ExcelUtility.getString(7, 0, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
+		selectmenu.navigateToPage(ExcelUtility.getString(7, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
+		expensecategorypage.clickNewButton().enterTitle().clickSaveButton();
+		assertEquals(expectedAlert,expensecategorypage.alertElementText(),"duplicate username exist");
+	}
 	
 
 }

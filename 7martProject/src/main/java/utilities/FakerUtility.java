@@ -38,4 +38,9 @@ public class FakerUtility
 			return faker.numerify("###");
 	}
 	 
+	 public static String phoneNumber() {
+			Faker faker = new Faker();
+			return faker.numerify("##########");
+	}
+	 
 }

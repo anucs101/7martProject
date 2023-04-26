@@ -50,19 +50,22 @@ public class ManagePages
 		return PageUtility.getCssValueofElement(newButton, "background-color");
 	}
 	
-	public void clickSearchButton()
+	public ManagePages clickSearchButton()
 	{
 		searchButton.click();
+		return this;
 	}
 	
-	public void enterTextinTitleFieldForSearch() throws IOException
+	public ManagePages enterTextinTitleFieldForSearch() throws IOException
 	{
 		PageUtility.enterText(titleFieldforSearch, ExcelUtility.getString(4, 1,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"ManagePage"));
+		return this;
 	}
 	
-	public void clickSearchButtoninSearchListPages()
+	public ManagePages clickSearchButtoninSearchListPages()
 	{
 		searchButtoninSearchListPages.click();
+		return this;
 	}
 	
 	public List<String> listOfValuesinTable()

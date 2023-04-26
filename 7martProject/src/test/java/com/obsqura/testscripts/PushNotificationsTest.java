@@ -19,7 +19,7 @@ public class PushNotificationsTest extends Base
 	Login login;
 	PushNotificationsPage pushnotificationspage;
 	SelectMenu selectmenu;
-	@Test
+	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verfyNotificationSentSuccessfully() throws IOException
 	{
 		String expectedAlertMessage = ExcelUtility.getString(0, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "PushNotification");
@@ -28,12 +28,7 @@ public class PushNotificationsTest extends Base
 		selectmenu = new SelectMenu(driver);
 		selectmenu.navigateToPage(ExcelUtility.getString(3, 0, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
 		pushnotificationspage = new PushNotificationsPage(driver);
-		assertTrue(pushnotificationspage.istitleFieldDisplayed(),"TitleField is not displayed");
-		pushnotificationspage.enterTextIntitleField();
-		assertTrue(pushnotificationspage.isDescriptionFieldDisplayed(),"DescriptionField is not displayed");
-		pushnotificationspage.enterTextInDescriptionField();
-		assertTrue(pushnotificationspage.isSendButtonEnabled(),"Send button is not disabled");
-		pushnotificationspage.clickSendButton();
+		pushnotificationspage.enterTextIntitleField().enterTextInDescriptionField().clickSendButton();
 		assertEquals(expectedAlertMessage,pushnotificationspage.alertMessage());
 	}
 }

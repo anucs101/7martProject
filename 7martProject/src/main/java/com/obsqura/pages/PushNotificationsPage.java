@@ -39,14 +39,16 @@ public class PushNotificationsPage
 		return PageUtility.isElementDisplayed(descriptionField);
 	}
 	
-	public void enterTextIntitleField()
+	public PushNotificationsPage enterTextIntitleField()
 	{
 		PageUtility.enterText(titleField, FakerUtility.firstName());
+		return this;
 	}
 	
-	public void enterTextInDescriptionField()
+	public PushNotificationsPage enterTextInDescriptionField()
 	{
 		PageUtility.enterText(descriptionField, FakerUtility.lastName());
+		return this;
 	}
 	
 	public boolean isSendButtonEnabled()
@@ -54,9 +56,10 @@ public class PushNotificationsPage
 		return PageUtility.isElementEnabled(sendButton);
 	}
 	
-	public void clickSendButton()
+	public PushNotificationsPage clickSendButton()
 	{
 		PageUtility.clickOnElement(sendButton);
+		return this;
 	}
 	
 	public String alertMessage()

@@ -1,5 +1,6 @@
 package com.obsqura.pages;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -19,9 +20,6 @@ public class ManageOfferCodePage
 		this.driver = driver;
 		PageFactory.initElements(driver,this);
 	}
-	
-	
-	
 	
 	
 	@FindBy(xpath ="//a[@onclick='click_button(1)']")
@@ -48,49 +46,66 @@ public class ManageOfferCodePage
 	@FindBy(xpath ="//div[contains(@class,'alert')]")
 	WebElement alertElement;
 	
+	@FindBy(xpath ="//input[@name='main_img']")
+	WebElement chooseFile;
 	
-	
-	public void clicknewButton()
+	public ManageOfferCodePage clicknewButton()
 	{
 		WaitUtility.waitForElement(driver, newButton);
 		newButton.click();
+		return this;
 	}
 	
-	public void enterTextInofferCodeTextField()
+	public ManageOfferCodePage enterTextInofferCodeTextField()
 	{
 		WaitUtility.waitForElement(driver, offerCodeTextField);
 		offerCodeTextField.sendKeys(FakerUtility.firstName());
+		return this;
 	}
 	
-	public void selectfirstOrderUserRadioButtonYes()
+	public ManageOfferCodePage selectfirstOrderUserRadioButtonYes()
 	{
 		firstOrderUserRadioButtonYes.click();
+		return this;
 	}
 	
-	public void enterTextInpercentageTextField()
+	public ManageOfferCodePage enterTextInpercentageTextField()
 	{
 		percentageTextField.sendKeys(FakerUtility.percentage());
+		return this;
 	}
 	
-	public void enterTextInamountTextField()
+	public ManageOfferCodePage enterTextInamountTextField()
 	{
 		amountTextField.sendKeys(FakerUtility.amount());
+		return this;
 	}
 	
-	public void enterTextIndescriptionTextField()
+	public ManageOfferCodePage enterTextIndescriptionTextField()
 	{
 		descriptionTextField.sendKeys(FakerUtility.firstName());
+		return this;
 	}
 	
-	public void clickSaveButton()
+	public ManageOfferCodePage clickSaveButton()
 	{
 		PageUtility.ScrollBy(driver);
 		saveButton.click();
+		return this;
 	}
 	
 	public String alertElementText()
 	{
 		return alertElement.getText();
+	}
+	
+	
+	public ManageOfferCodePage uploadImage() throws IOException
+	{
+		PageUtility.ScrollBy(driver);
+		chooseFile.sendKeys("D:\\product.jpg");
+		chooseFile.submit();
+		return this;
 	}
 	
 	

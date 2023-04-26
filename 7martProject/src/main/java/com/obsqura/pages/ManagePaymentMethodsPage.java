@@ -47,19 +47,22 @@ public class ManagePaymentMethodsPage
 		return tableheaderList;
 	}
 	
-	public void clickEditButton()
+	public ManagePaymentMethodsPage  clickEditButton()
 	{
 		editButton.click();
+		return this;
 	}
 	
-	public void enterValueinPayLimitTextField(String paylimitValue) throws IOException
+	public ManagePaymentMethodsPage  enterValueinPayLimitTextField(String paylimitValue) throws IOException
 	{
 		payLimitTextField.sendKeys(paylimitValue);
+		return this;
 	}
 	
-	public void clickUpdateButton()
+	public ManagePaymentMethodsPage  clickUpdateButton()
 	{
 		updateButton.click();
+		return this;
 	}
 	
 	public List<String> tableListupdated()
@@ -72,9 +75,10 @@ public class ManagePaymentMethodsPage
 		return tableListTextsUpdated;
 	}
 	
-	public void clearPayLimitTextField()
+	public ManagePaymentMethodsPage  clearPayLimitTextField()
 	{
 		payLimitTextField.clear();
+		return this;
 	}
 	
 	//List<String> texts = Arrays.asList(null)

@@ -20,7 +20,7 @@ public class AdminUsersTest extends Base
 	AdminUsersPage adminuserspage;
 	Login login;
 	SelectMenu selectmenu;
-	@Test
+	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage() throws IOException
 	{
 		login = new Login(driver);
@@ -31,8 +31,8 @@ public class AdminUsersTest extends Base
 		adminuserspage.clickHomeLinkElement();
 		assertTrue(adminuserspage.expectedElementIsPresent(),"cannot navigate to dashboard");
 	}
-	@Test
-	public void verifyDropdownMenuOptionsofUsertypeFieldByClickingNewButton() throws IOException
+	@Test(retryAnalyzer = generaltests.Retry.class)
+	public void verifydropdownMenuWhenAddingUsersInformation() throws IOException
 	{
 		ArrayList<String> expectedDropdownMenuOptions = ExcelUtility.getRow(System.getProperty("user.dir")+constants.Constants.EXCELFILE, "Adminusers", 3);
 		login = new Login(driver);
@@ -40,11 +40,10 @@ public class AdminUsersTest extends Base
 		selectmenu = new SelectMenu(driver);
 		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"SelectMenu"));
 		adminuserspage = new AdminUsersPage(driver);
-		adminuserspage = new AdminUsersPage(driver);
 		adminuserspage.clickNewButton();
 		assertTrue(expectedDropdownMenuOptions.equals(adminuserspage.dropdownMenuOptionsList()));
 	}
-	@Test
+	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyDeleteFunctionalityAndCheckAlert() throws IOException
 	{
 		String expectedAlert = ExcelUtility.getString(7, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"Adminusers");
@@ -53,11 +52,21 @@ public class AdminUsersTest extends Base
 		selectmenu = new SelectMenu(driver);
 		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"SelectMenu"));
 		adminuserspage = new AdminUsersPage(driver);
-		adminuserspage = new AdminUsersPage(driver);
-		adminuserspage.clickDeleteButton();
-		adminuserspage.clickOktoPopupWindow();
+		adminuserspage.clickDeleteButton().clickOktoPopupWindow();
 		assertEquals(expectedAlert,adminuserspage.alertElementText(),"value cannot be deleted");
 		
+	}
+	@Test(retryAnalyzer = generaltests.Retry.class)
+	public void verifyAddingUsersInformations() throws IOException
+	{
+		String expectedAlert = ExcelUtility.getString(10, 1,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"Adminusers");
+		login = new Login(driver);
+		login.verifyLoginwithValidcredentials();
+		selectmenu = new SelectMenu(driver);
+		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"SelectMenu"));
+		adminuserspage = new AdminUsersPage(driver);
+		adminuserspage.clickNewButton().enterUserName().enterPassword().selectAdmin().clickSaveButton();
+		assertEquals(expectedAlert,adminuserspage.alertElementText(),"could not add new user");
 	}
 
 }

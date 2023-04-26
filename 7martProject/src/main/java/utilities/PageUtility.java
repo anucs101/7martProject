@@ -129,7 +129,12 @@ public class PageUtility
 		
 		public static void ScrollBy(WebDriver driver) {
 			JavascriptExecutor Js1 = (JavascriptExecutor) driver;
-			Js1.executeScript("window.scrollBy(0,2500)");
+			Js1.executeScript("window.scrollBy(0,4500)","");
+		}
+		
+		public static void ScrollByVisibleElement(WebDriver driver,WebElement element ) {
+			JavascriptExecutor Js1 = (JavascriptExecutor) driver;
+			Js1.executeScript("arguments[0].scrollIntoView();", element);
 		}
 
 		public static void stopPageRefresh(WebDriver driver) {

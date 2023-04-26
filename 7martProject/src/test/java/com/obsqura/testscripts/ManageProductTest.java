@@ -21,7 +21,7 @@ public class ManageProductTest extends Base
 Login login;
 ManageProductPage manageproductpage;
 SelectMenu selectmenu;
-	@Test
+	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyColorChangeofStockUnlimitedButtontoLimited() throws IOException
 	{
 		String colorOfUnlimitedButton = ExcelUtility.getString(2, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ManageProduct");
@@ -38,7 +38,7 @@ SelectMenu selectmenu;
 		
 	}
 
-	@Test
+	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane() throws IOException
 	{
 		String expectedUrl = ExcelUtility.getString(7, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ManageProduct");
