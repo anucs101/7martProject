@@ -5,22 +5,15 @@
     <listener class-name="generaltests.Listener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.obsqura.testscripts.ExpenseCategoryTest">
+      <class name="com.obsqura.testscripts.ManagePagesTest">
         <methods>
           <include name="initializeBrowser"/>
-          <include name="verifyAddingExpenseCategoryInformationswithDuplicateTitle"/>
+          <include name="verifyBackgroundColorOfNewButton"/>
           <include name="browserQuit"/>
         </methods>
-      </class> <!-- com.obsqura.testscripts.ExpenseCategoryTest -->
-      <class name="com.obsqura.testscripts.LoginPageTest">
-        <methods>
-          <include name="initializeBrowser"/>
-          <include name="verifylogin" invocation-numbers="0 1 2"/>
-          <include name="browserQuit"/>
-        </methods>
-      </class> <!-- com.obsqura.testscripts.LoginPageTest -->
+      </class> <!-- com.obsqura.testscripts.ManagePagesTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

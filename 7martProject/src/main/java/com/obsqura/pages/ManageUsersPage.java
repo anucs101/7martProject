@@ -2,6 +2,8 @@
 package com.obsqura.pages;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +35,18 @@ public class ManageUsersPage
 	@FindBy(xpath ="//span[text()='Active']")
 	WebElement activeButton;
 	
+	@FindBy(xpath ="//a[@onclick='click_button(2)']")
+	WebElement searchButton;
+	
+	@FindBy(xpath ="//input[@placeholder='Name']")
+	WebElement NameField;
+	
+	@FindBy(xpath ="//button[@name='Search']")
+	WebElement searchButtoninSearchList;
+	
+	@FindBy(xpath="//table[contains(@class,'table')]//tbody//tr//td")
+	List<WebElement> listAfterSearch;
+	
 	
 	public void clickPasswordButton()
 	{
@@ -53,6 +67,32 @@ public class ManageUsersPage
 	public void clickActiveButton()
 	{
 		activeButton.click();
+	}
+	
+	public ManageUsersPage clickSearchButton()
+	{
+		searchButton.click();
+		return this;
+	}
+	
+	public void enterName(String element)
+	{
+		NameField.sendKeys(element);
+	}
+	
+	public void clickSearchButtonInSearchList()
+	{
+		searchButtoninSearchList.click();
+	}
+	
+	public List<String> SearchResults()
+	{
+		List<String> listofValuesAfterSearch = new ArrayList<String>();
+		for(WebElement value : listAfterSearch)
+		{
+			listofValuesAfterSearch.add(PageUtility.getElementText(value));
+		}
+		return listofValuesAfterSearch;
 	}
 	
 	

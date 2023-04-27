@@ -13,6 +13,7 @@ import com.obsqura.pages.DashboardPageSelector;
 import com.obsqura.pages.SelectMenu;
 
 import utilities.ExcelUtility;
+import utilities.UtilityFile;
 
 
 public class AdminUsersTest extends Base
@@ -26,7 +27,7 @@ public class AdminUsersTest extends Base
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
 		selectmenu = new SelectMenu(driver);
-		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"SelectMenu"));
+		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,UtilityFile.excelPath,"SelectMenu"));
 		adminuserspage = new AdminUsersPage(driver);
 		adminuserspage.clickHomeLinkElement();
 		assertTrue(adminuserspage.expectedElementIsPresent(),"cannot navigate to dashboard");
@@ -38,7 +39,7 @@ public class AdminUsersTest extends Base
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
 		selectmenu = new SelectMenu(driver);
-		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"SelectMenu"));
+		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,UtilityFile.excelPath,"SelectMenu"));
 		adminuserspage = new AdminUsersPage(driver);
 		adminuserspage.clickNewButton();
 		assertTrue(expectedDropdownMenuOptions.equals(adminuserspage.dropdownMenuOptionsList()));
@@ -46,11 +47,11 @@ public class AdminUsersTest extends Base
 	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyDeleteFunctionalityAndCheckAlert() throws IOException
 	{
-		String expectedAlert = ExcelUtility.getString(7, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"Adminusers");
+		String expectedAlert = ExcelUtility.getString(7, 0,UtilityFile.excelPath,"Adminusers");
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
 		selectmenu = new SelectMenu(driver);
-		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"SelectMenu"));
+		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,UtilityFile.excelPath,"SelectMenu"));
 		adminuserspage = new AdminUsersPage(driver);
 		adminuserspage.clickDeleteButton().clickOktoPopupWindow();
 		assertEquals(expectedAlert,adminuserspage.alertElementText(),"value cannot be deleted");
@@ -59,14 +60,26 @@ public class AdminUsersTest extends Base
 	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyAddingUsersInformations() throws IOException
 	{
-		String expectedAlert = ExcelUtility.getString(10, 1,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"Adminusers");
+		String expectedAlert = ExcelUtility.getString(10, 1,UtilityFile.excelPath,"Adminusers");
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
 		selectmenu = new SelectMenu(driver);
-		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"SelectMenu"));
+		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,UtilityFile.excelPath,"SelectMenu"));
 		adminuserspage = new AdminUsersPage(driver);
 		adminuserspage.clickNewButton().enterUserName().enterPassword().selectAdmin().clickSaveButton();
 		assertEquals(expectedAlert,adminuserspage.alertElementText(),"could not add new user");
+	}
+	@Test(retryAnalyzer = generaltests.Retry.class)
+	public void verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor() throws IOException
+	{
+		String expectedBackgroundColor = ExcelUtility.getString(13, 1,UtilityFile.excelPath,"Adminusers");
+		login = new Login(driver);
+		login.verifyLoginwithValidcredentials();
+		selectmenu = new SelectMenu(driver);
+		selectmenu.navigateToPage(ExcelUtility.getString(6, 0,UtilityFile.excelPath,"SelectMenu"));
+		adminuserspage = new AdminUsersPage(driver);
+		adminuserspage.clickUnloackButton();
+		assertTrue(adminuserspage.backgroundColorOfStatusButton().equals(expectedBackgroundColor),"status cannot be changed with unlock button");
 	}
 
 }

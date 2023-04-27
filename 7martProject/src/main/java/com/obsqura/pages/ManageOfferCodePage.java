@@ -1,6 +1,7 @@
 package com.obsqura.pages;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -48,6 +49,24 @@ public class ManageOfferCodePage
 	
 	@FindBy(xpath ="//input[@name='main_img']")
 	WebElement chooseFile;
+	
+	@FindBy(xpath ="//i[@class='fas fa-trash-alt']")
+	WebElement deleteButton;
+	
+	@FindBy(xpath ="//a[contains(@class,'btn-danger')]")
+	List<WebElement> rows;
+	
+	@FindBy(xpath ="//a[@onclick='click_button(2)']")
+	WebElement searchButton;
+	
+	@FindBy(xpath ="//input[@placeholder='Offer Code']")
+	WebElement searchOffercode;
+	
+	@FindBy(xpath ="//button[@name='Search']")
+	WebElement searchButtoninSearchList;
+	
+	@FindBy(xpath="//table[contains(@class,'table')]//tbody//tr//td")
+	List<WebElement> listAfterSearch;
 	
 	public ManageOfferCodePage clicknewButton()
 	{
@@ -107,6 +126,45 @@ public class ManageOfferCodePage
 		chooseFile.submit();
 		return this;
 	}
+	
+	public void clickDeleteButton()
+	{
+		deleteButton.click();
+		driver.switchTo().alert().accept();
+	}
+	
+	public int numberOfRows()
+	{
+		return rows.size();
+	}
+	
+	public void clickSearchButton()
+	{
+		searchButton.click();
+	
+	}
+	
+	public void enterOffercodeinSearch(String element)
+	{
+		searchOffercode.sendKeys(element);
+	}
+	
+	public void clickSearchButtonInSearchList()
+	{
+		searchButtoninSearchList.click();
+	}
+	
+	public List<String> SearchResults()
+	{
+		List<String> listofValuesAfterSearch = new ArrayList<String>();
+		for(WebElement value : listAfterSearch)
+		{
+			listofValuesAfterSearch.add(PageUtility.getElementText(value));
+		}
+		return listofValuesAfterSearch;
+	}
+	
+	
 	
 	
 	

@@ -62,7 +62,6 @@ public class ManageSliderPage
 	public ManageSliderPage uploadImage() throws IOException
 	{
 		chooseFile.sendKeys("D:\\product.jpg");
-		//chooseFile.submit();
 		return this;
 	}
 	

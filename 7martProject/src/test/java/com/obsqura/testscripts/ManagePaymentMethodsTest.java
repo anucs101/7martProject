@@ -12,6 +12,7 @@ import com.obsqura.pages.ManageProductPage;
 import com.obsqura.pages.SelectMenu;
 
 import utilities.ExcelUtility;
+import utilities.UtilityFile;
 
 public class ManagePaymentMethodsTest extends Base
 {
@@ -21,22 +22,22 @@ public class ManagePaymentMethodsTest extends Base
 	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifytableheadersofManagePaymentMethods() throws IOException
 	{
-		ArrayList<String> expectedTableHeaders = ExcelUtility.getRow(System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ManagePaymentMethods", 3);
+		ArrayList<String> expectedTableHeaders = ExcelUtility.getRow(UtilityFile.excelPath, "ManagePaymentMethods", 3);
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
 		selectmenu = new SelectMenu(driver);
-		selectmenu.navigateToPage(ExcelUtility.getString(5, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"SelectMenu"));
+		selectmenu.navigateToPage(ExcelUtility.getString(5, 0,UtilityFile.excelPath,"SelectMenu"));
 		managepaymentmethodspage = new ManagePaymentMethodsPage(driver);
 		assertTrue(expectedTableHeaders.equals(managepaymentmethodspage.tableHeadersList()),"Table headers are not matching as expected");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable() throws IOException
 	{
-		String payLimitValue = ExcelUtility.getNumeric(0, 1,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"ManagePaymentMethods");
+		String payLimitValue = ExcelUtility.getNumeric(0, 1,UtilityFile.excelPath,"ManagePaymentMethods");
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
 		selectmenu = new SelectMenu(driver);
-		selectmenu.navigateToPage(ExcelUtility.getString(5, 0,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"SelectMenu"));
+		selectmenu.navigateToPage(ExcelUtility.getString(5, 0,UtilityFile.excelPath,"SelectMenu"));
 		managepaymentmethodspage = new ManagePaymentMethodsPage(driver);
 		managepaymentmethodspage.clickEditButton().clearPayLimitTextField().enterValueinPayLimitTextField(payLimitValue).clickUpdateButton();
 		assertTrue(managepaymentmethodspage.tableListupdated().contains(payLimitValue),"pay limit value is not updated");

@@ -13,6 +13,7 @@ import com.obsqura.pages.ManageUsersPage;
 import com.obsqura.pages.SelectMenu;
 
 import utilities.ExcelUtility;
+import utilities.UtilityFile;
 
 public class ManageUsersTest extends Base
 {
@@ -26,23 +27,36 @@ public class ManageUsersTest extends Base
 		login.verifyLoginwithValidcredentials();
 		manageuserspage= new ManageUsersPage(driver);
 		selectmenu = new SelectMenu(driver);
-		selectmenu.navigateToPage(ExcelUtility.getString(8, 0, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
+		selectmenu.navigateToPage(ExcelUtility.getString(8, 0, UtilityFile.excelPath, "SelectMenu"));
 		manageuserspage.clickPasswordButton();
 		assertTrue(manageuserspage.passwordFieldisPresent(),"Could not open password field when clicking password button");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verifyBackGroundColorOfAlert() throws IOException
 	{
-		String expectedBackgroundColorOfAlert = ExcelUtility.getString(1, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "Manageuser");
+		String expectedBackgroundColorOfAlert = ExcelUtility.getString(1, 1, UtilityFile.excelPath, "Manageuser");
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
 		manageuserspage= new ManageUsersPage(driver);
 		selectmenu = new SelectMenu(driver);
-		selectmenu.navigateToPage(ExcelUtility.getString(8, 0, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
+		selectmenu.navigateToPage(ExcelUtility.getString(8, 0, UtilityFile.excelPath, "SelectMenu"));
 		manageuserspage.clickActiveButton();
 		assertEquals(expectedBackgroundColorOfAlert,manageuserspage.backgroundColorOfAlert(),"Background color of alert is not green");
+	}
+	@Test
+	public void verifySearchFunctinality() throws IOException
+	{
+		String searchElement = ExcelUtility.getString(4, 1, UtilityFile.excelPath, "Manageuser");
+		login = new Login(driver);
+		login.verifyLoginwithValidcredentials();
+		manageuserspage= new ManageUsersPage(driver);
+		selectmenu = new SelectMenu(driver);
+		selectmenu.navigateToPage(ExcelUtility.getString(8, 0, UtilityFile.excelPath, "SelectMenu"));
+		manageuserspage.clickSearchButton();
+		manageuserspage.enterName(searchElement);
+		manageuserspage.clickSearchButtonInSearchList();
+		assertTrue(manageuserspage.SearchResults().contains(searchElement),"Search function is not working");
 		
-	
 	}
 
 }

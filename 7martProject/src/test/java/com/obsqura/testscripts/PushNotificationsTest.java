@@ -12,6 +12,7 @@ import com.obsqura.pages.PushNotificationsPage;
 import com.obsqura.pages.SelectMenu;
 
 import utilities.ExcelUtility;
+import utilities.UtilityFile;
 
 public class PushNotificationsTest extends Base
 
@@ -22,11 +23,11 @@ public class PushNotificationsTest extends Base
 	@Test(retryAnalyzer = generaltests.Retry.class)
 	public void verfyNotificationSentSuccessfully() throws IOException
 	{
-		String expectedAlertMessage = ExcelUtility.getString(0, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "PushNotification");
+		String expectedAlertMessage = ExcelUtility.getString(0, 1, UtilityFile.excelPath, "PushNotification");
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
 		selectmenu = new SelectMenu(driver);
-		selectmenu.navigateToPage(ExcelUtility.getString(3, 0, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "SelectMenu"));
+		selectmenu.navigateToPage(ExcelUtility.getString(3, 0, UtilityFile.excelPath, "SelectMenu"));
 		pushnotificationspage = new PushNotificationsPage(driver);
 		pushnotificationspage.enterTextIntitleField().enterTextInDescriptionField().clickSendButton();
 		assertEquals(expectedAlertMessage,pushnotificationspage.alertMessage());

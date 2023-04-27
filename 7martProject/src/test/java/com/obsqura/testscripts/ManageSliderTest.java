@@ -43,5 +43,7 @@ public class ManageSliderTest extends Base
 		assertEquals(expectedAlert,managesliderpage.AlertText(),"file cannot be uploaded");
 		
 	}
+	
+	
 
 }

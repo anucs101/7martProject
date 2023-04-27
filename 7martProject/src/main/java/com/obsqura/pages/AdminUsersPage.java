@@ -1,5 +1,6 @@
 package com.obsqura.pages;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +9,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.ExcelUtility;
 import utilities.FakerUtility;
 import utilities.PageUtility;
+import utilities.UtilityFile;
 
 public class AdminUsersPage
 {
@@ -48,8 +51,11 @@ public class AdminUsersPage
 	@FindBy(xpath="//button[@name='Create']")
 	WebElement SaveButton;
 	
+	@FindBy(xpath="//i[@class='fa fa-unlock']")
+	WebElement unloackButton;
 	
-	
+	@FindBy(xpath="//span[@class='badge bg-warning']")
+	WebElement statusInactiveButton;
 	
 	public void clickHomeLinkElement()
 	{
@@ -116,4 +122,16 @@ public class AdminUsersPage
 		SaveButton.click();
 		return this;
 	}
+	
+	public void clickUnloackButton()
+	{
+		unloackButton.click();
+	}
+	
+	public String backgroundColorOfStatusButton() throws IOException
+	{
+		String propertyname= ExcelUtility.getString(12, 1,UtilityFile.excelPath,"Adminusers");
+		return PageUtility.getCssValueofElement(statusInactiveButton, propertyname);
+	}
+	
 }
