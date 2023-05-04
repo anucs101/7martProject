@@ -19,7 +19,7 @@ public class ManageDeliveryBoyTest extends Base
 	ManageDeliveryBoyPage managedeliveryboypage;
 	SelectMenu selectmenu;
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage() throws IOException
+	public void verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage() 
 	{
 		String titleExpectedinDeliveryBoyPage = ExcelUtility.getString(1, 1, UtilityFile.excelPath, "ManageDeliveryBoy");
 		login = new Login(driver);
@@ -30,7 +30,7 @@ public class ManageDeliveryBoyTest extends Base
 		assertEquals(titleExpectedinDeliveryBoyPage,managedeliveryboypage.titleofDeliveryBoyPage(),"title of manage delivery boy is not as expected");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed() throws IOException
+	public void verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed() 
 	{
 		String expectedAlert = ExcelUtility.getString(5, 1, UtilityFile.excelPath, "ManageDeliveryBoy");
 		login = new Login(driver);
@@ -43,7 +43,7 @@ public class ManageDeliveryBoyTest extends Base
 		assertEquals(expectedAlert,managedeliveryboypage.WarningAlertText(),"duplicate username allowed");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifynewDeliveryBoyDetailsUpdated() throws IOException
+	public void verifynewDeliveryBoyDetailsUpdated() 
 	{
 		String expectedelement = ExcelUtility.getString(8, 0, UtilityFile.excelPath, "ManageDeliveryBoy");
 		login = new Login(driver);

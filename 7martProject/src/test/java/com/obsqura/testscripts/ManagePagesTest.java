@@ -20,7 +20,7 @@ public class ManagePagesTest extends Base
 	DashboardPageSelector dashboardpageselector;
 	
 	@Test (groups = { "smoke", "regression" },retryAnalyzer = generaltests.Retry.class)
-	public void verifyBackgroundColorOfNewButton() throws IOException
+	public void verifyBackgroundColorOfNewButton() 
 	{
 		String expectedBackGroundColorofNewButton = ExcelUtility.getString(1, 1,UtilityFile.excelPath,"ManagePage");
 		login = new Login(driver);
@@ -31,7 +31,7 @@ public class ManagePagesTest extends Base
 		assertEquals(expectedBackGroundColorofNewButton, managepages.backgroundColorOfNewButton(),"BackgroundColor does not match with the expected");
 	}
 	@Test(groups = { "smoke", },retryAnalyzer = generaltests.Retry.class)
-	public void verifySearchfunctinality() throws IOException
+	public void verifySearchfunctinality() 
 	{
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();

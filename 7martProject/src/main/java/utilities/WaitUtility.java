@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class WaitUtility 
 {
 	 
-		public static final long IMPLICIT_WAIT = 10;
+		public static final long IMPLICIT_WAIT = 0;
 		public static final long PAGE_LOAD_WAIT = 20;
 		public static final long EXPLICIT_WAIT = 10;
 		public static final long FLUENT_WAIT = 30;

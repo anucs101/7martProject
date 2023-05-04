@@ -29,7 +29,7 @@ public class ManageOfferCodeTest extends Base
 	Login login;
 	DashboardPageSelector dashboardpageselector;
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully() throws IOException
+	public void verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully() 
 	{
 		String expectedAlert = ExcelUtility.getString(2, 0,UtilityFile.excelPath,"ManageOffercode");
 		login = new Login(driver);
@@ -41,7 +41,7 @@ public class ManageOfferCodeTest extends Base
 		assertEquals(expectedAlert,manageoffercodepage.alertElementText(),"New offercode cannot be created");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyDeleteFunctionality() throws IOException
+	public void verifyDeleteFunctionality() 
 	{
 		
 		login = new Login(driver);
@@ -55,7 +55,7 @@ public class ManageOfferCodeTest extends Base
 		assertTrue(manageoffercodepage.numberOfRows()==(rowcountbeforeDelete-1));
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifySearchIfElementisNotPresent() throws IOException
+	public void verifySearchIfElementisNotPresent() 
 	{
 		String searchElement = ExcelUtility.getString(5, 1,UtilityFile.excelPath,"ManageOffercode");
 		login = new Login(driver);

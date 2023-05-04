@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.ExcelUtility;
-import utilities.FakerUtility;
+import utilities.RandomDataUtility;
 import utilities.PageUtility;
 import utilities.WaitUtility;
 
@@ -70,29 +70,29 @@ public class ManageDeliveryBoyPage
 	
 	public ManageDeliveryBoyPage enterName()
 	{
-		PageUtility.enterText(nameFiled, FakerUtility.firstName());
+		PageUtility.enterText(nameFiled, RandomDataUtility.firstName());
 		return this;
 	}
 	
 	public ManageDeliveryBoyPage enterEmailID()
 	{
-		PageUtility.enterText(emailFiled, FakerUtility.emailID());
+		PageUtility.enterText(emailFiled, RandomDataUtility.emailID());
 		return this;
 	}
 	
 	public ManageDeliveryBoyPage enterPhoneNumber()
 	{
-		PageUtility.enterText(phoneNoFiled, FakerUtility.phoneNumber());
+		PageUtility.enterText(phoneNoFiled, RandomDataUtility.phoneNumber());
 		return this;
 	}
 	
 	public ManageDeliveryBoyPage enterAddress()
 	{
-		PageUtility.enterText(addressFiled, FakerUtility.lastName());
+		PageUtility.enterText(addressFiled, RandomDataUtility.lastName());
 		return this;
 	}
 	
-	public ManageDeliveryBoyPage enterUserName() throws IOException
+	public ManageDeliveryBoyPage enterUserName() 
 	{
 		String username = ExcelUtility.getString(3, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ManageDeliveryBoy");
 		PageUtility.enterText(userNameFiled, username);
@@ -101,7 +101,7 @@ public class ManageDeliveryBoyPage
 	
 	public ManageDeliveryBoyPage enterPassword()
 	{
-		PageUtility.enterText(passwordFiled, FakerUtility.lastName());
+		PageUtility.enterText(passwordFiled, RandomDataUtility.lastName());
 		WaitUtility.waitForElementIsPresent(driver, saveButton);
 		return this;
 	}
@@ -119,16 +119,16 @@ public class ManageDeliveryBoyPage
 		return PageUtility.getElementText(alertElement);
 	}
 	
-	public ManageDeliveryBoyPage enterNamewithoutfaker() throws IOException
+	public ManageDeliveryBoyPage enterNamewithoutfaker() 
 	{
 		String name = ExcelUtility.getString(8, 0, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ManageDeliveryBoy");
 		PageUtility.enterText(nameFiled,name);
 		return this;
 	}
 	
-	public ManageDeliveryBoyPage enterUserNameWithfaker() throws IOException
+	public ManageDeliveryBoyPage enterUserNameWithfaker() 
 	{
-		PageUtility.enterText(userNameFiled,FakerUtility.firstName());
+		PageUtility.enterText(userNameFiled,RandomDataUtility.firstName());
 		return this;
 	}
 	

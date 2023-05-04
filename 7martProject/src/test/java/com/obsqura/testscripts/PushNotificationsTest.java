@@ -21,7 +21,7 @@ public class PushNotificationsTest extends Base
 	PushNotificationsPage pushnotificationspage;
 	SelectMenu selectmenu;
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verfyNotificationSentSuccessfully() throws IOException
+	public void verfyNotificationSentSuccessfully() 
 	{
 		String expectedAlertMessage = ExcelUtility.getString(0, 1, UtilityFile.excelPath, "PushNotification");
 		login = new Login(driver);

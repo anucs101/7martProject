@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,50 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">38 methods, 1 failed,  4 skipped,  33 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageOfferCodeTest" class="method navigator-link" hash-for-method="verifyDeleteFunctionality">verifyDeleteFunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageOfferCodeTest" class="method navigator-link" hash-for-method="verifyDeleteFunctionality">verifyDeleteFunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageOfferCodeTest" class="method navigator-link" hash-for-method="verifyDeleteFunctionality">verifyDeleteFunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageLocationTest" class="method navigator-link" hash-for-method="verifySearchusingCountryAndState">verifySearchusingCountryAndState</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageLocationTest" class="method navigator-link" hash-for-method="verifySearchusingCountryAndState">verifySearchusingCountryAndState</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +147,167 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.PushNotificationsTest" class="method navigator-link" hash-for-method="verfyNotificationSentSuccessfully">verfyNotificationSentSuccessfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageLocationTest" class="method navigator-link" hash-for-method="verifyAddLocationInformations">verifyAddLocationInformations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ExpenseCategoryTest" class="method navigator-link" hash-for-method="verifyAddingExpenseCategoryInformationswithDuplicateTitle">verifyAddingExpenseCategoryInformationswithDuplicateTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.AdminUsersTest" class="method navigator-link" hash-for-method="verifyAddingUsersInformations">verifyAddingUsersInformations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.LoginPageTest" class="method navigator-link" hash-for-method="verifyAlertMessageWithInvalidUsernameAndValidPassword">verifyAlertMessageWithInvalidUsernameAndValidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageUsersTest" class="method navigator-link" hash-for-method="verifyBackGroundColorOfAlert">verifyBackGroundColorOfAlert</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManagePagesTest" class="method navigator-link" hash-for-method="verifyBackgroundColorOfNewButton">verifyBackgroundColorOfNewButton</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageProductTest" class="method navigator-link" hash-for-method="verifyColorChangeofStockUnlimitedButtontoLimited">verifyColorChangeofStockUnlimitedButtontoLimited</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.AdminUsersTest" class="method navigator-link" hash-for-method="verifyDeleteFunctionalityAndCheckAlert">verifyDeleteFunctionalityAndCheckAlert</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageLocationTest" class="method navigator-link" hash-for-method="verifyEditFunctionality">verifyEditFunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageSliderTest" class="method navigator-link" hash-for-method="verifyImageUploadedSuccesfully">verifyImageUploadedSuccesfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.LoginPageTest" class="method navigator-link" hash-for-method="verifyLoginwithValidUsernameAndPassword">verifyLoginwithValidUsernameAndPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageProductTest" class="method navigator-link" hash-for-method="verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane">verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageOfferCodeTest" class="method navigator-link" hash-for-method="verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully">verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ExpenseCategoryTest" class="method navigator-link" hash-for-method="verifyRowCountofExpenseCategoryTable">verifyRowCountofExpenseCategoryTable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageUsersTest" class="method navigator-link" hash-for-method="verifySearchFunctinality">verifySearchFunctinality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageOfferCodeTest" class="method navigator-link" hash-for-method="verifySearchIfElementisNotPresent">verifySearchIfElementisNotPresent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManagePagesTest" class="method navigator-link" hash-for-method="verifySearchfunctinality">verifySearchfunctinality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageLocationTest" class="method navigator-link" hash-for-method="verifySearchusingCountryAndState">verifySearchusingCountryAndState</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageDeliveryBoyTest" class="method navigator-link" hash-for-method="verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage">verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.AdminUsersTest" class="method navigator-link" hash-for-method="verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor">verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.AdminUsersTest" class="method navigator-link" hash-for-method="verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage">verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ExpenseCategoryTest" class="method navigator-link" hash-for-method="verifyWidthOfActionColumn">verifyWidthOfActionColumn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.AdminUsersTest" class="method navigator-link" hash-for-method="verifydropdownMenuWhenAddingUsersInformation">verifydropdownMenuWhenAddingUsersInformation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageSliderTest" class="method navigator-link" hash-for-method="verifyeditbuttonAllignedBeforeDeleteButton">verifyeditbuttonAllignedBeforeDeleteButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.LoginPageTest" class="method navigator-link" hash-for-method="verifylogin(Anu, admin)">verifylogin(Anu, admin)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.LoginPageTest" class="method navigator-link" hash-for-method="verifylogin(user, ad43)">verifylogin(user, ad43)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.LoginPageTest" class="method navigator-link" hash-for-method="verifylogin(admin, rev)">verifylogin(admin, rev)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageDeliveryBoyTest" class="method navigator-link" hash-for-method="verifynewDeliveryBoyDetailsUpdated">verifynewDeliveryBoyDetailsUpdated</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManagePaymentMethodsTest" class="method navigator-link" hash-for-method="verifytableheadersofManagePaymentMethods">verifytableheadersofManagePaymentMethods</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManagePaymentMethodsTest" class="method navigator-link" hash-for-method="verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable">verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageDeliveryBoyTest" class="method navigator-link" hash-for-method="verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed">verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.ManageUsersTest" class="method navigator-link" hash-for-method="verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow">verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -124,6 +322,384 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManageOfferCodeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDeleteFunctionality">
+                  </a> <!-- verifyDeleteFunctionality -->
+                  <span class="method-name">verifyDeleteFunctionality</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality(ManageOfferCodeTest.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManageOfferCodeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDeleteFunctionality">
+                  </a> <!-- verifyDeleteFunctionality -->
+                  <span class="method-name">verifyDeleteFunctionality</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality(ManageOfferCodeTest.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDeleteFunctionality">
+                  </a> <!-- verifyDeleteFunctionality -->
+                  <span class="method-name">verifyDeleteFunctionality</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality(ManageOfferCodeTest.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManageLocationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchusingCountryAndState">
+                  </a> <!-- verifySearchusingCountryAndState -->
+                  <span class="method-name">verifySearchusingCountryAndState</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aae0325b40a8028cc4c4e872ee453d7b, isElementSelected {id=7135b1d4-926d-4418-9c88-5646f4556356}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62909/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on WINDOWS (aae0325b40a8028cc4c4e872ee453d7b)] -&gt; xpath: //select[@name=&apos;state_id&apos;]]] -&gt; xpath: .//option[normalize-space(.) = &quot;England&quot;]]
+Session ID: aae0325b40a8028cc4c4e872ee453d7b
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.isSelected(RemoteWebElement.java:185)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:319)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:119)
+	at utilities.PageUtility.selectDropdownbyText(PageUtility.java:49)
+	at com.obsqura.pages.ManageLocationPage.selectState(ManageLocationPage.java:79)
+	at com.obsqura.testscripts.ManageLocationTest.verifySearchusingCountryAndState(ManageLocationTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchusingCountryAndState">
+                  </a> <!-- verifySearchusingCountryAndState -->
+                  <span class="method-name">verifySearchusingCountryAndState</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4000de980f2b159815a55988b505a9a, clickElement {id=97e936dc-b1c4-46c3-9e2b-e05d864f4300}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62868}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62868/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on WINDOWS (f4000de980f2b159815a55988b505a9a)] -&gt; xpath: //select[@name=&apos;state_id&apos;]]] -&gt; xpath: .//option[normalize-space(.) = &quot;England&quot;]]
+Session ID: f4000de980f2b159815a55988b505a9a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:320)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:119)
+	at utilities.PageUtility.selectDropdownbyText(PageUtility.java:49)
+	at com.obsqura.pages.ManageLocationPage.selectState(ManageLocationPage.java:79)
+	at com.obsqura.testscripts.ManageLocationTest.verifySearchusingCountryAndState(ManageLocationTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManageUsersTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBackGroundColorOfAlert">
+                  </a> <!-- verifyBackGroundColorOfAlert -->
+                  <span class="method-name">verifyBackGroundColorOfAlert</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchFunctinality">
+                  </a> <!-- verifySearchFunctinality -->
+                  <span class="method-name">verifySearchFunctinality</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow">
+                  </a> <!-- verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow -->
+                  <span class="method-name">verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManageSliderTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyImageUploadedSuccesfully">
+                  </a> <!-- verifyImageUploadedSuccesfully -->
+                  <span class="method-name">verifyImageUploadedSuccesfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyeditbuttonAllignedBeforeDeleteButton">
+                  </a> <!-- verifyeditbuttonAllignedBeforeDeleteButton -->
+                  <span class="method-name">verifyeditbuttonAllignedBeforeDeleteButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.LoginPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAlertMessageWithInvalidUsernameAndValidPassword">
+                  </a> <!-- verifyAlertMessageWithInvalidUsernameAndValidPassword -->
+                  <span class="method-name">verifyAlertMessageWithInvalidUsernameAndValidPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginwithValidUsernameAndPassword">
+                  </a> <!-- verifyLoginwithValidUsernameAndPassword -->
+                  <span class="method-name">verifyLoginwithValidUsernameAndPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifylogin(Anu, admin)">
+                  </a> <!-- verifylogin(Anu, admin) -->
+                  <span class="method-name">verifylogin</span>
+                  <span class="parameters">(Anu, admin)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifylogin(user, ad43)">
+                  </a> <!-- verifylogin(user, ad43) -->
+                  <span class="method-name">verifylogin</span>
+                  <span class="parameters">(user, ad43)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifylogin(admin, rev)">
+                  </a> <!-- verifylogin(admin, rev) -->
+                  <span class="method-name">verifylogin</span>
+                  <span class="parameters">(admin, rev)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManageOfferCodeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully">
+                  </a> <!-- verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully -->
+                  <span class="method-name">verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchIfElementisNotPresent">
+                  </a> <!-- verifySearchIfElementisNotPresent -->
+                  <span class="method-name">verifySearchIfElementisNotPresent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManagePaymentMethodsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifytableheadersofManagePaymentMethods">
+                  </a> <!-- verifytableheadersofManagePaymentMethods -->
+                  <span class="method-name">verifytableheadersofManagePaymentMethods</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable">
+                  </a> <!-- verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable -->
+                  <span class="method-name">verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManageLocationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddLocationInformations">
+                  </a> <!-- verifyAddLocationInformations -->
+                  <span class="method-name">verifyAddLocationInformations</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEditFunctionality">
+                  </a> <!-- verifyEditFunctionality -->
+                  <span class="method-name">verifyEditFunctionality</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchusingCountryAndState">
+                  </a> <!-- verifySearchusingCountryAndState -->
+                  <span class="method-name">verifySearchusingCountryAndState</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.ExpenseCategoryTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddingExpenseCategoryInformationswithDuplicateTitle">
+                  </a> <!-- verifyAddingExpenseCategoryInformationswithDuplicateTitle -->
+                  <span class="method-name">verifyAddingExpenseCategoryInformationswithDuplicateTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRowCountofExpenseCategoryTable">
+                  </a> <!-- verifyRowCountofExpenseCategoryTable -->
+                  <span class="method-name">verifyRowCountofExpenseCategoryTable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWidthOfActionColumn">
+                  </a> <!-- verifyWidthOfActionColumn -->
+                  <span class="method-name">verifyWidthOfActionColumn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManageDeliveryBoyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage">
+                  </a> <!-- verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage -->
+                  <span class="method-name">verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifynewDeliveryBoyDetailsUpdated">
+                  </a> <!-- verifynewDeliveryBoyDetailsUpdated -->
+                  <span class="method-name">verifynewDeliveryBoyDetailsUpdated</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed">
+                  </a> <!-- verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed -->
+                  <span class="method-name">verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.ManageProductTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyColorChangeofStockUnlimitedButtontoLimited">
+                  </a> <!-- verifyColorChangeofStockUnlimitedButtontoLimited -->
+                  <span class="method-name">verifyColorChangeofStockUnlimitedButtontoLimited</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane">
+                  </a> <!-- verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane -->
+                  <span class="method-name">verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -146,6 +722,64 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.AdminUsersTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddingUsersInformations">
+                  </a> <!-- verifyAddingUsersInformations -->
+                  <span class="method-name">verifyAddingUsersInformations</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDeleteFunctionalityAndCheckAlert">
+                  </a> <!-- verifyDeleteFunctionalityAndCheckAlert -->
+                  <span class="method-name">verifyDeleteFunctionalityAndCheckAlert</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor">
+                  </a> <!-- verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor -->
+                  <span class="method-name">verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage">
+                  </a> <!-- verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage -->
+                  <span class="method-name">verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifydropdownMenuWhenAddingUsersInformation">
+                  </a> <!-- verifydropdownMenuWhenAddingUsersInformation -->
+                  <span class="method-name">verifydropdownMenuWhenAddingUsersInformation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsqura.testscripts.PushNotificationsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verfyNotificationSentSuccessfully">
+                  </a> <!-- verfyNotificationSentSuccessfully -->
+                  <span class="method-name">verfyNotificationSentSuccessfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -162,7 +796,26 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.LoginPageTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;verifylogin&quot;/&gt;
+          &lt;include name=&quot;verifyAlertMessageWithInvalidUsernameAndValidPassword&quot;/&gt;
+          &lt;include name=&quot;verifyLoginwithValidUsernameAndPassword&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.obsqura.testscripts.LoginPageTest --&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManageProductTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.PushNotificationsTest&quot;/&gt;
       &lt;class name=&quot;com.obsqura.testscripts.ManagePagesTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManagePaymentMethodsTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManageDeliveryBoyTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManageSliderTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ExpenseCategoryTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.AdminUsersTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManageUsersTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManageOfferCodeTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManagePagesTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManageUsersTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.ManageLocationTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -176,7 +829,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (14 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -222,20 +875,164 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(38);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyBackgroundColorOfNewButton')
-data.setCell(0, 2, 'com.obsqura.testscripts.ManagePagesTest')
-data.setCell(0, 3, 1932);
+data.setCell(0, 1, 'verifynewDeliveryBoyDetailsUpdated')
+data.setCell(0, 2, 'com.obsqura.testscripts.ManageDeliveryBoyTest')
+data.setCell(0, 3, 5712);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifySearchfunctinality')
-data.setCell(1, 2, 'com.obsqura.testscripts.ManagePagesTest')
-data.setCell(1, 3, 1769);
+data.setCell(1, 1, 'verifyWidthOfActionColumn')
+data.setCell(1, 2, 'com.obsqura.testscripts.ExpenseCategoryTest')
+data.setCell(1, 3, 5210);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifySearchusingCountryAndState')
+data.setCell(2, 2, 'com.obsqura.testscripts.ManageLocationTest')
+data.setCell(2, 3, 3771);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully')
+data.setCell(3, 2, 'com.obsqura.testscripts.ManageOfferCodeTest')
+data.setCell(3, 3, 3577);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyAddLocationInformations')
+data.setCell(4, 2, 'com.obsqura.testscripts.ManageLocationTest')
+data.setCell(4, 3, 3094);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyImageUploadedSuccesfully')
+data.setCell(5, 2, 'com.obsqura.testscripts.ManageSliderTest')
+data.setCell(5, 3, 2982);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed')
+data.setCell(6, 2, 'com.obsqura.testscripts.ManageDeliveryBoyTest')
+data.setCell(6, 3, 2969);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyEditFunctionality')
+data.setCell(7, 2, 'com.obsqura.testscripts.ManageLocationTest')
+data.setCell(7, 3, 2966);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyAddingExpenseCategoryInformationswithDuplicateTitle')
+data.setCell(8, 2, 'com.obsqura.testscripts.ExpenseCategoryTest')
+data.setCell(8, 3, 2647);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyAddingUsersInformations')
+data.setCell(9, 2, 'com.obsqura.testscripts.AdminUsersTest')
+data.setCell(9, 3, 2642);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verfyNotificationSentSuccessfully')
+data.setCell(10, 2, 'com.obsqura.testscripts.PushNotificationsTest')
+data.setCell(10, 3, 2629);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable')
+data.setCell(11, 2, 'com.obsqura.testscripts.ManagePaymentMethodsTest')
+data.setCell(11, 3, 2596);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor')
+data.setCell(12, 2, 'com.obsqura.testscripts.AdminUsersTest')
+data.setCell(12, 3, 2308);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyDeleteFunctionalityAndCheckAlert')
+data.setCell(13, 2, 'com.obsqura.testscripts.AdminUsersTest')
+data.setCell(13, 3, 2224);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifySearchIfElementisNotPresent')
+data.setCell(14, 2, 'com.obsqura.testscripts.ManageOfferCodeTest')
+data.setCell(14, 3, 2138);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyRowCountofExpenseCategoryTable')
+data.setCell(15, 2, 'com.obsqura.testscripts.ExpenseCategoryTest')
+data.setCell(15, 3, 2132);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage')
+data.setCell(16, 2, 'com.obsqura.testscripts.AdminUsersTest')
+data.setCell(16, 3, 2127);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verifyColorChangeofStockUnlimitedButtontoLimited')
+data.setCell(17, 2, 'com.obsqura.testscripts.ManageProductTest')
+data.setCell(17, 3, 2124);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyDeleteFunctionality')
+data.setCell(18, 2, 'com.obsqura.testscripts.ManageOfferCodeTest')
+data.setCell(18, 3, 2108);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verifyDeleteFunctionality')
+data.setCell(19, 2, 'com.obsqura.testscripts.ManageOfferCodeTest')
+data.setCell(19, 3, 2012);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verifySearchusingCountryAndState')
+data.setCell(20, 2, 'com.obsqura.testscripts.ManageLocationTest')
+data.setCell(20, 3, 1926);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'verifyDeleteFunctionality')
+data.setCell(21, 2, 'com.obsqura.testscripts.ManageOfferCodeTest')
+data.setCell(21, 3, 1891);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'verifydropdownMenuWhenAddingUsersInformation')
+data.setCell(22, 2, 'com.obsqura.testscripts.AdminUsersTest')
+data.setCell(22, 3, 1889);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'verifySearchusingCountryAndState')
+data.setCell(23, 2, 'com.obsqura.testscripts.ManageLocationTest')
+data.setCell(23, 3, 1888);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'verifySearchfunctinality')
+data.setCell(24, 2, 'com.obsqura.testscripts.ManagePagesTest')
+data.setCell(24, 3, 1791);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'verifyeditbuttonAllignedBeforeDeleteButton')
+data.setCell(25, 2, 'com.obsqura.testscripts.ManageSliderTest')
+data.setCell(25, 3, 1762);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'verifySearchFunctinality')
+data.setCell(26, 2, 'com.obsqura.testscripts.ManageUsersTest')
+data.setCell(26, 3, 1748);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'verifyBackGroundColorOfAlert')
+data.setCell(27, 2, 'com.obsqura.testscripts.ManageUsersTest')
+data.setCell(27, 3, 1713);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage')
+data.setCell(28, 2, 'com.obsqura.testscripts.ManageDeliveryBoyTest')
+data.setCell(28, 3, 1685);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'verifytableheadersofManagePaymentMethods')
+data.setCell(29, 2, 'com.obsqura.testscripts.ManagePaymentMethodsTest')
+data.setCell(29, 3, 1566);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'verifyBackgroundColorOfNewButton')
+data.setCell(30, 2, 'com.obsqura.testscripts.ManagePagesTest')
+data.setCell(30, 3, 1522);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane')
+data.setCell(31, 2, 'com.obsqura.testscripts.ManageProductTest')
+data.setCell(31, 3, 1481);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow')
+data.setCell(32, 2, 'com.obsqura.testscripts.ManageUsersTest')
+data.setCell(32, 3, 1414);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'verifylogin')
+data.setCell(33, 2, 'com.obsqura.testscripts.LoginPageTest')
+data.setCell(33, 3, 1355);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'verifyLoginwithValidUsernameAndPassword')
+data.setCell(34, 2, 'com.obsqura.testscripts.LoginPageTest')
+data.setCell(34, 3, 946);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'verifyAlertMessageWithInvalidUsernameAndValidPassword')
+data.setCell(35, 2, 'com.obsqura.testscripts.LoginPageTest')
+data.setCell(35, 3, 806);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'verifylogin')
+data.setCell(36, 2, 'com.obsqura.testscripts.LoginPageTest')
+data.setCell(36, 3, 569);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'verifylogin')
+data.setCell(37, 2, 'com.obsqura.testscripts.LoginPageTest')
+data.setCell(37, 3, 557);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -261,30 +1058,497 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.obsqura.testscripts.ManagePagesTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.obsqura.testscripts.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowser(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyBackgroundColorOfNewButton</span>
-                <span class="method-start">2886 ms</span>
+                <span class="method-name">verifylogin(user, ad43)</span>
+                <span class="method-start">3660 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">browserQuit([TestResult name=verifyBackgroundColorOfNewButton status=SUCCESS method=ManagePagesTest.verifyBackgr...)</span>
-                <span class="method-start">4822 ms</span>
+                <span class="method-name">browserQuit([TestResult name=verifylogin status=SUCCESS method=LoginPageTest.verifylogin(java.lang.String,java.l...)</span>
+                <span class="method-start">5022 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowser(Chrome)</span>
-                <span class="method-start">5048 ms</span>
+                <span class="method-start">5262 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifylogin(Anu, admin)</span>
+                <span class="method-start">7613 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifylogin status=SUCCESS method=LoginPageTest.verifylogin(java.lang.String,java.l...)</span>
+                <span class="method-start">8172 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">8451 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifylogin(admin, rev)</span>
+                <span class="method-start">10904 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifylogin status=SUCCESS method=LoginPageTest.verifylogin(java.lang.String,java.l...)</span>
+                <span class="method-start">11474 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">11696 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAlertMessageWithInvalidUsernameAndValidPassword</span>
+                <span class="method-start">13824 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyAlertMessageWithInvalidUsernameAndValidPassword status=SUCCESS method=LoginPa...)</span>
+                <span class="method-start">14631 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">14898 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginwithValidUsernameAndPassword</span>
+                <span class="method-start">17333 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyLoginwithValidUsernameAndPassword status=SUCCESS method=LoginPageTest.verifyL...)</span>
+                <span class="method-start">18280 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.ManageProductTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">18590 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyColorChangeofStockUnlimitedButtontoLimited</span>
+                <span class="method-start">20805 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyColorChangeofStockUnlimitedButtontoLimited status=SUCCESS method=ManageProduc...)</span>
+                <span class="method-start">22930 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">23152 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane</span>
+                <span class="method-start">25244 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane status=SUC...)</span>
+                <span class="method-start">26727 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.PushNotificationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">27018 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verfyNotificationSentSuccessfully</span>
+                <span class="method-start">29364 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verfyNotificationSentSuccessfully status=SUCCESS method=PushNotificationsTest.verfy...)</span>
+                <span class="method-start">31994 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.ManagePagesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">32282 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyBackgroundColorOfNewButton</span>
+                <span class="method-start">39244 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyBackgroundColorOfNewButton status=SUCCESS method=ManagePagesTest.verifyBackgr...)</span>
+                <span class="method-start">40767 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">41045 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifySearchfunctinality</span>
-                <span class="method-start">7319 ms</span>
+                <span class="method-start">43390 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuit([TestResult name=verifySearchfunctinality status=SUCCESS method=ManagePagesTest.verifySearchfunctina...)</span>
-                <span class="method-start">9089 ms</span>
+                <span class="method-start">45182 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.ManagePaymentMethodsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">45390 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifytableheadersofManagePaymentMethods</span>
+                <span class="method-start">47573 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifytableheadersofManagePaymentMethods status=SUCCESS method=ManagePaymentMethods...)</span>
+                <span class="method-start">49141 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">49455 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable</span>
+                <span class="method-start">51617 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable status=SUCCESS me...)</span>
+                <span class="method-start">54214 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.ManageDeliveryBoyTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">54518 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage</span>
+                <span class="method-start">56745 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage status=SUCCESS met...)</span>
+                <span class="method-start">58431 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">58682 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifynewDeliveryBoyDetailsUpdated</span>
+                <span class="method-start">60936 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifynewDeliveryBoyDetailsUpdated status=SUCCESS method=ManageDeliveryBoyTest.veri...)</span>
+                <span class="method-start">66648 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">66963 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed</span>
+                <span class="method-start">74297 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed status=SUCCESS meth...)</span>
+                <span class="method-start">77268 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.ManageSliderTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">77557 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyImageUploadedSuccesfully</span>
+                <span class="method-start">79775 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyImageUploadedSuccesfully status=SUCCESS method=ManageSliderTest.verifyImageUp...)</span>
+                <span class="method-start">82757 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">82951 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyeditbuttonAllignedBeforeDeleteButton</span>
+                <span class="method-start">85216 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyeditbuttonAllignedBeforeDeleteButton status=SUCCESS method=ManageSliderTest.v...)</span>
+                <span class="method-start">86979 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.ExpenseCategoryTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">87221 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddingExpenseCategoryInformationswithDuplicateTitle</span>
+                <span class="method-start">89651 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyAddingExpenseCategoryInformationswithDuplicateTitle status=SUCCESS method=Exp...)</span>
+                <span class="method-start">92299 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">92610 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyRowCountofExpenseCategoryTable</span>
+                <span class="method-start">94924 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyRowCountofExpenseCategoryTable status=SUCCESS method=ExpenseCategoryTest.veri...)</span>
+                <span class="method-start">97056 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">97308 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyWidthOfActionColumn</span>
+                <span class="method-start">99586 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyWidthOfActionColumn status=SUCCESS method=ExpenseCategoryTest.verifyWidthOfAc...)</span>
+                <span class="method-start">104797 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.AdminUsersTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">105033 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddingUsersInformations</span>
+                <span class="method-start">109841 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyAddingUsersInformations status=SUCCESS method=AdminUsersTest.verifyAddingUser...)</span>
+                <span class="method-start">112483 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">112744 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyDeleteFunctionalityAndCheckAlert</span>
+                <span class="method-start">115184 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyDeleteFunctionalityAndCheckAlert status=SUCCESS method=AdminUsersTest.verifyD...)</span>
+                <span class="method-start">117409 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">117649 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor</span>
+                <span class="method-start">119811 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor status=SUCCESS metho...)</span>
+                <span class="method-start">122120 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">122443 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage</span>
+                <span class="method-start">124726 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage status=SUCCESS method=A...)</span>
+                <span class="method-start">126854 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">127125 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifydropdownMenuWhenAddingUsersInformation</span>
+                <span class="method-start">129391 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifydropdownMenuWhenAddingUsersInformation status=SUCCESS method=AdminUsersTest.v...)</span>
+                <span class="method-start">131281 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.ManageUsersTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">131543 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyBackGroundColorOfAlert</span>
+                <span class="method-start">133635 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyBackGroundColorOfAlert status=SUCCESS method=ManageUsersTest.verifyBackGround...)</span>
+                <span class="method-start">135349 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">135553 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchFunctinality</span>
+                <span class="method-start">137804 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifySearchFunctinality status=SUCCESS method=ManageUsersTest.verifySearchFunctina...)</span>
+                <span class="method-start">139553 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">139855 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow</span>
+                <span class="method-start">142082 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow status=SUCCESS method...)</span>
+                <span class="method-start">143497 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.ManageOfferCodeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">143763 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyDeleteFunctionality</span>
+                <span class="method-start">145840 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyDeleteFunctionality status=SKIP method=ManageOfferCodeTest.verifyDeleteFuncti...)</span>
+                <span class="method-start">147731 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">147998 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyDeleteFunctionality</span>
+                <span class="method-start">150236 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyDeleteFunctionality status=SKIP method=ManageOfferCodeTest.verifyDeleteFuncti...)</span>
+                <span class="method-start">152345 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">152593 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyDeleteFunctionality</span>
+                <span class="method-start">154904 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyDeleteFunctionality status=FAILURE method=ManageOfferCodeTest.verifyDeleteFun...)</span>
+                <span class="method-start">156924 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">157345 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully</span>
+                <span class="method-start">159835 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully status=SUCCESS...)</span>
+                <span class="method-start">163415 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">163681 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchIfElementisNotPresent</span>
+                <span class="method-start">166055 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifySearchIfElementisNotPresent status=SUCCESS method=ManageOfferCodeTest.verifyS...)</span>
+                <span class="method-start">168194 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.testscripts.ManageLocationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">168434 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddLocationInformations</span>
+                <span class="method-start">175684 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyAddLocationInformations status=SUCCESS method=ManageLocationTest.verifyAddLoc...)</span>
+                <span class="method-start">178779 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">179041 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyEditFunctionality</span>
+                <span class="method-start">181313 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyEditFunctionality status=SUCCESS method=ManageLocationTest.verifyEditFunction...)</span>
+                <span class="method-start">184280 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">184519 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchusingCountryAndState</span>
+                <span class="method-start">186536 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifySearchusingCountryAndState status=SKIP method=ManageLocationTest.verifySearch...)</span>
+                <span class="method-start">188465 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">188715 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchusingCountryAndState</span>
+                <span class="method-start">190976 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifySearchusingCountryAndState status=SKIP method=ManageLocationTest.verifySearch...)</span>
+                <span class="method-start">192865 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">193174 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchusingCountryAndState</span>
+                <span class="method-start">195397 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifySearchusingCountryAndState status=SUCCESS method=ManageLocationTest.verifySea...)</span>
+                <span class="method-start">199169 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

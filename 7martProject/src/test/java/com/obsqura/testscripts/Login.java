@@ -17,7 +17,7 @@ public class Login extends Base
 		this.driver = driver;
 	}
 	LoginPage loginpage;
-	public void verifyLoginwithValidcredentials() throws IOException
+	public void verifyLoginwithValidcredentials() 
 	{
 		String titleofDashboard = ExcelUtility.getString(10, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "loginPage");
 		String username = ExcelUtility.getString(3, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "loginPage");

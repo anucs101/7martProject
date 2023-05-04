@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utilities.FakerUtility;
+import utilities.RandomDataUtility;
 import utilities.PageUtility;
 
 public class PushNotificationsPage
@@ -41,13 +41,13 @@ public class PushNotificationsPage
 	
 	public PushNotificationsPage enterTextIntitleField()
 	{
-		PageUtility.enterText(titleField, FakerUtility.firstName());
+		PageUtility.enterText(titleField, RandomDataUtility.firstName());
 		return this;
 	}
 	
 	public PushNotificationsPage enterTextInDescriptionField()
 	{
-		PageUtility.enterText(descriptionField, FakerUtility.lastName());
+		PageUtility.enterText(descriptionField, RandomDataUtility.lastName());
 		return this;
 	}
 	

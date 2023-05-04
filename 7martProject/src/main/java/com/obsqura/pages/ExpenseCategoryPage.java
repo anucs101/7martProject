@@ -43,11 +43,11 @@ public class ExpenseCategoryPage
 	@FindBy(xpath="//div[contains(@class,'alert')]")
 	WebElement alertElement;
 	
+	@FindBy(xpath="//p[text()='Expense Category']")
+	WebElement expenseCategoryPage;
 	
-	public void clickExpenseCategory()
-	{
-		expenseCategory.click();
-	}
+	
+	
 	
 	public int numberOfRows()
 	{
@@ -55,9 +55,10 @@ public class ExpenseCategoryPage
 		return Rows.size();
 	}
 	
-	public String widthOfActionColumn() throws IOException
+	public String widthOfActionColumn() 
 	{
 		String propertyname = ExcelUtility.getString(2, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ExpenseCategory");
+		WaitUtility.waitForElementIsPresent(driver, Action);
 		return PageUtility.getCssValueofElement(Action, propertyname);
 	}
 	
@@ -68,7 +69,7 @@ public class ExpenseCategoryPage
 		return this;
 	}
 	
-	public ExpenseCategoryPage  enterTitle() throws IOException
+	public ExpenseCategoryPage  enterTitle() 
 	{
 		String titletext = ExcelUtility.getString(4, 1, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "ExpenseCategory");
 		PageUtility.enterText(titleField, titletext);
@@ -84,6 +85,12 @@ public class ExpenseCategoryPage
 	public String alertElementText()
 	{
 		return PageUtility.getElementText(alertElement);
+	}
+	
+	public void clickExpenseCategory()
+	{
+		WaitUtility.waitForElementClickable(driver, expenseCategoryPage);
+		expenseCategoryPage.click();
 	}
 	
 

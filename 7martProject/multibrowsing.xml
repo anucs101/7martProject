@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel = "tests" thread-count="2">
+<suite name="Suite" parallel = "tests" thread-count="3">
+<listeners>
+<listener class-name="generaltests.Listener"/>
+</listeners>
   <test  name="Chromebrowsing">
 	<parameter name="browser" value="Chrome"></parameter>
     <classes>
-      <class name="com.obsqura.testscripts.LoginPageTest"/>
+      <class name="com.obsqura.testscripts.PushNotificationsTest"/>
     </classes>
   </test> <!-- Test -->
-<test  name="Edgebrowsing">
+ <test  name="Edgebrowsing">
 	<parameter name="browser" value="Edge"></parameter>
     <classes>
-      <class name="com.obsqura.testscripts.LoginPageTest"/>
+      <class name="com.obsqura.testscripts.PushNotificationsTest"/>
+    </classes>
+  </test> <!-- Test -->
+ <test  name="firefoxbrowsing">
+	<parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="com.obsqura.testscripts.PushNotificationsTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

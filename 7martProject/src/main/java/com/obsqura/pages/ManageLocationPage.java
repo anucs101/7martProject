@@ -66,28 +66,28 @@ public class ManageLocationPage
 		return this;
 	}
 	
-	public ManageLocationPage selectCountry() throws IOException
+	public ManageLocationPage selectCountry() 
 	{
 		String selectbytext = ExcelUtility.getString(1, 0, UtilityFile.excelPath, "ManageLocation");
 		 PageUtility.selectDropdownbyText(selectCountryField, selectbytext);
 		 return this;
 	}
 	
-	public ManageLocationPage selectState() throws IOException
+	public ManageLocationPage selectState() 
 	{
 		String selectbytext = ExcelUtility.getString(1, 1, UtilityFile.excelPath, "ManageLocation");
 		 PageUtility.selectDropdownbyText(selectStateField, selectbytext);
 		 return this;
 	}
 	
-	public ManageLocationPage enterLocation() throws IOException
+	public ManageLocationPage enterLocation() 
 	{
 		String location =  ExcelUtility.getString(1, 2, UtilityFile.excelPath, "ManageLocation");
 		locationField.sendKeys(location);
 		 return this;
 	}
 	
-	public ManageLocationPage enterDeliveryCharge() throws IOException
+	public ManageLocationPage enterDeliveryCharge() 
 	{
 		int charge =  ExcelUtility.getNumericValue(1, 3, UtilityFile.excelPath, "ManageLocation");
 		deliveryChargeField.sendKeys(String.valueOf(charge));
@@ -108,7 +108,7 @@ public class ManageLocationPage
 		return this;
 	}
 	
-	public ManageLocationPage editSelectState() throws IOException
+	public ManageLocationPage editSelectState() 
 	{
 		String selectbytext = ExcelUtility.getString(4, 1, UtilityFile.excelPath, "ManageLocation");
 		 PageUtility.selectDropdownbyText(selectStateField, selectbytext);
@@ -128,14 +128,14 @@ public class ManageLocationPage
 		return alertElement.getText();
 	}
 	
-	public ManageLocationPage editSelectCountry() throws IOException
+	public ManageLocationPage editSelectCountry() 
 	{
 		String selectbytext = ExcelUtility.getString(1, 0, UtilityFile.excelPath, "ManageLocation");
 		 PageUtility.selectDropdownbyText(selectCountryField, selectbytext);
 		 return this;
 	}
 	
-	public ManageLocationPage editLocation() throws IOException
+	public ManageLocationPage editLocation() 
 	{
 		String location =  ExcelUtility.getString(4, 2, UtilityFile.excelPath, "ManageLocation");
 		locationField.clear();
@@ -143,7 +143,7 @@ public class ManageLocationPage
 		 return this;
 	}
 	
-	public ManageLocationPage editDeliveryCharge() throws IOException
+	public ManageLocationPage editDeliveryCharge() 
 	{
 		int charge =  ExcelUtility.getNumericValue(4, 3, UtilityFile.excelPath, "ManageLocation");
 		deliveryChargeField.clear();
@@ -172,5 +172,7 @@ public class ManageLocationPage
 		}
 		return listofValuesAfterSearch;
 	}
+	
+	
 
 }

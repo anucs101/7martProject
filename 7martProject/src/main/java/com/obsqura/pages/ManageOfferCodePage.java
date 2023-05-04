@@ -9,8 +9,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utilities.FakerUtility;
+import utilities.ExcelUtility;
+import utilities.RandomDataUtility;
 import utilities.PageUtility;
+import utilities.UtilityFile;
 import utilities.WaitUtility;
 
 public class ManageOfferCodePage 
@@ -78,7 +80,7 @@ public class ManageOfferCodePage
 	public ManageOfferCodePage enterTextInofferCodeTextField()
 	{
 		WaitUtility.waitForElement(driver, offerCodeTextField);
-		offerCodeTextField.sendKeys(FakerUtility.firstName());
+		offerCodeTextField.sendKeys(RandomDataUtility.firstName());
 		return this;
 	}
 	
@@ -90,19 +92,19 @@ public class ManageOfferCodePage
 	
 	public ManageOfferCodePage enterTextInpercentageTextField()
 	{
-		percentageTextField.sendKeys(FakerUtility.percentage());
+		percentageTextField.sendKeys(RandomDataUtility.percentage());
 		return this;
 	}
 	
 	public ManageOfferCodePage enterTextInamountTextField()
 	{
-		amountTextField.sendKeys(FakerUtility.amount());
+		amountTextField.sendKeys(RandomDataUtility.amount());
 		return this;
 	}
 	
 	public ManageOfferCodePage enterTextIndescriptionTextField()
 	{
-		descriptionTextField.sendKeys(FakerUtility.firstName());
+		descriptionTextField.sendKeys(RandomDataUtility.firstName());
 		return this;
 	}
 	
@@ -119,10 +121,10 @@ public class ManageOfferCodePage
 	}
 	
 	
-	public ManageOfferCodePage uploadImage() throws IOException
+	public ManageOfferCodePage uploadImage() 
 	{
 		PageUtility.ScrollBy(driver);
-		chooseFile.sendKeys("D:\\product.jpg");
+		chooseFile.sendKeys(ExcelUtility.getString(7, 0,UtilityFile.excelPath,"ManageOffercode"));
 		chooseFile.submit();
 		return this;
 	}

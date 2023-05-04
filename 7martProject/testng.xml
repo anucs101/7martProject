@@ -7,25 +7,26 @@
   <test thread-count="5" name="Test">
 	<parameter name="browser" value="Chrome"></parameter>
     <classes>
-		<!-- <class name="com.obsqura.testscripts.LoginPageTest">
+	<class name="com.obsqura.testscripts.LoginPageTest">
 	<methods>
 		<include name="verifylogin"/>
-		<exclude name="verifyAlertMessageWithInvalidUsernameAndValidPassword"/>
-		<exclude name="verifyLoginwithValidUsernameAndPassword"/>
+		<include name="verifyAlertMessageWithInvalidUsernameAndValidPassword"/>
+		<include name="verifyLoginwithValidUsernameAndPassword"/>
 	</methods>
 	</class>
    <class name ="com.obsqura.testscripts.ManageProductTest"/>
 	<class name ="com.obsqura.testscripts.PushNotificationsTest"/>
 	<class name ="com.obsqura.testscripts.ManagePagesTest"/>
 	<class name="com.obsqura.testscripts.ManagePaymentMethodsTest"/>
-	<class name="com.obsqura.testscripts.ExpenseCategoryTest"/>
 	<class name ="com.obsqura.testscripts.ManageDeliveryBoyTest"/>
 	<class name="com.obsqura.testscripts.ManageSliderTest"/>
-	<class name="com.obsqura.testscripts.ManageLocationTest"/>
+	<class name="com.obsqura.testscripts.ExpenseCategoryTest"/>
 	<class name="com.obsqura.testscripts.AdminUsersTest"/>
 	<class name ="com.obsqura.testscripts.ManageUsersTest"/>
-	<class name ="com.obsqura.testscripts.ManageOfferCodeTest"/>-->
+	 <class name ="com.obsqura.testscripts.ManageOfferCodeTest"/>
 	<class name ="com.obsqura.testscripts.ManagePagesTest"/>
+	<class name ="com.obsqura.testscripts.ManageUsersTest"/>
+	<class name="com.obsqura.testscripts.ManageLocationTest"/>
 	</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

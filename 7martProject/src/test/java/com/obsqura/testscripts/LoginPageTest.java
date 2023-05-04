@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.obsqura.pages.LoginPage;
 import utilities.ExcelUtility;
-import utilities.FakerUtility;
+import utilities.RandomDataUtility;
 import utilities.UtilityFile;
 
 
@@ -20,7 +20,7 @@ public class LoginPageTest extends Base
 	
 	LoginPage loginpage;
 	@Test(dataProvider="loginProvider",retryAnalyzer = generaltests.Retry.class)
-	public void verifylogin(String username,String password) throws IOException
+	public void verifylogin(String username,String password) 
 	{
 		String titleofDashboard = ExcelUtility.getString(10, 1, UtilityFile.excelPath, "loginPage");
 		loginpage = new LoginPage(driver);
@@ -34,10 +34,10 @@ public class LoginPageTest extends Base
 		
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyAlertMessageWithInvalidUsernameAndValidPassword() throws IOException
+	public void verifyAlertMessageWithInvalidUsernameAndValidPassword() 
 	{
 		String expectedAlertMessage = ExcelUtility.getString(12, 1, UtilityFile.excelPath, "loginPage");
-		String username = FakerUtility.firstName();
+		String username = RandomDataUtility.firstName();
 		String password = ExcelUtility.getString(4, 1, UtilityFile.excelPath, "loginPage");
 		loginpage = new LoginPage(driver);
 		loginpage.enterTextinUsernameField(username);
@@ -49,7 +49,7 @@ public class LoginPageTest extends Base
 		
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyLoginwithValidUsernameAndPassword() throws IOException
+	public void verifyLoginwithValidUsernameAndPassword() 
 	{
 		String titleofDashboard = ExcelUtility.getString(10, 1, UtilityFile.excelPath, "loginPage");
 		String username = ExcelUtility.getString(3, 1, UtilityFile.excelPath, "loginPage");

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.ExcelUtility;
-import utilities.FakerUtility;
+import utilities.RandomDataUtility;
 import utilities.PageUtility;
 import utilities.UtilityFile;
 
@@ -102,13 +102,13 @@ public class AdminUsersPage
 	
 	public AdminUsersPage enterUserName()
 	{
-		PageUtility.enterText(usernameField, FakerUtility.firstName());
+		PageUtility.enterText(usernameField, RandomDataUtility.firstName());
 		return this;
 	}
 	
 	public AdminUsersPage enterPassword()
 	{
-		PageUtility.enterText(passwordField, FakerUtility.firstName());
+		PageUtility.enterText(passwordField, RandomDataUtility.firstName());
 		return this;
 	}
 	public AdminUsersPage selectAdmin()
@@ -128,7 +128,7 @@ public class AdminUsersPage
 		unloackButton.click();
 	}
 	
-	public String backgroundColorOfStatusButton() throws IOException
+	public String backgroundColorOfStatusButton() 
 	{
 		String propertyname= ExcelUtility.getString(12, 1,UtilityFile.excelPath,"Adminusers");
 		return PageUtility.getCssValueofElement(statusInactiveButton, propertyname);

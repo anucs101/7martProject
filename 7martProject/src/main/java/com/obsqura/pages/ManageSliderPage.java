@@ -59,13 +59,13 @@ public class ManageSliderPage
 		return this;
 	}
 	
-	public ManageSliderPage uploadImage() throws IOException
+	public ManageSliderPage uploadImage() 
 	{
-		chooseFile.sendKeys("D:\\product.jpg");
+		chooseFile.sendKeys(ExcelUtility.getString(6, 1,UtilityFile.excelPath,"ManageSlider"));
 		return this;
 	}
 	
-	public ManageSliderPage enterLink() throws IOException
+	public ManageSliderPage enterLink() 
 	{
 		linkTextField.sendKeys(ExcelUtility.getString(1, 1,UtilityFile.excelPath,"ManageSlider"));
 		return this;

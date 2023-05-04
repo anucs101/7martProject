@@ -58,7 +58,7 @@ public class ManageUsersPage
 		return PageUtility.isElementDisplayed(passwordField);
 	}
 	
-	public String backgroundColorOfAlert() throws IOException
+	public String backgroundColorOfAlert() 
 	{
 		String propertyName = ExcelUtility.getString(0, 0, System.getProperty("user.dir")+constants.Constants.EXCELFILE, "Manageuser");
 		return PageUtility.getCssValueofElement(alertElement,propertyName);
@@ -94,6 +94,8 @@ public class ManageUsersPage
 		}
 		return listofValuesAfterSearch;
 	}
+	
+	
 	
 	
 	

@@ -53,7 +53,7 @@ public class ManagePaymentMethodsPage
 		return this;
 	}
 	
-	public ManagePaymentMethodsPage  enterValueinPayLimitTextField(String paylimitValue) throws IOException
+	public ManagePaymentMethodsPage  enterValueinPayLimitTextField(String paylimitValue) 
 	{
 		payLimitTextField.sendKeys(paylimitValue);
 		return this;
@@ -81,7 +81,7 @@ public class ManagePaymentMethodsPage
 		return this;
 	}
 	
-	//List<String> texts = Arrays.asList(null)
+	
 	
 	
 }

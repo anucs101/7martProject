@@ -56,7 +56,7 @@ public class ManagePages
 		return this;
 	}
 	
-	public ManagePages enterTextinTitleFieldForSearch() throws IOException
+	public ManagePages enterTextinTitleFieldForSearch() 
 	{
 		PageUtility.enterText(titleFieldforSearch, ExcelUtility.getString(4, 1,System.getProperty("user.dir")+constants.Constants.EXCELFILE,"ManagePage"));
 		return this;

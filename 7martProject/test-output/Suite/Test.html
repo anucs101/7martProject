@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>33/1/4</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 27 17:21:44 IST 2023</td>
+<td>Started on:</td><td>Wed May 03 19:22:34 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>9 seconds (9253 ms)</td>
+<tr><td>Total time:</td><td>199 seconds (199464 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,55 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality()'><b>verifyDeleteFunctionality</b><br>Test class: com.obsqura.testscripts.ManageOfferCodeTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality(ManageOfferCodeTest.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1598229086", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1598229086'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality(ManageOfferCodeTest.java:55)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>com.obsqura.testscripts.ManageOfferCodeTest@7cf6a5f9</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,15 +124,428 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.obsqura.testscripts.ManagePagesTest.verifyBackgroundColorOfNewButton()'><b>verifyBackgroundColorOfNewButton</b><br>Test class: com.obsqura.testscripts.ManagePagesTest</td>
+<td title='com.obsqura.testscripts.AdminUsersTest.verifyDeleteFunctionalityAndCheckAlert()'><b>verifyDeleteFunctionalityAndCheckAlert</b><br>Test class: com.obsqura.testscripts.AdminUsersTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.AdminUsersTest@71454b9d</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManagePaymentMethodsTest.verifytableheadersofManagePaymentMethods()'><b>verifytableheadersofManagePaymentMethods</b><br>Test class: com.obsqura.testscripts.ManagePaymentMethodsTest</td>
 <td></td>
 <td>1</td>
-<td>com.obsqura.testscripts.ManagePagesTest@18a136ac</td></tr>
+<td>com.obsqura.testscripts.ManagePaymentMethodsTest@25bfcafd</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.LoginPageTest.verifylogin()'><b>verifylogin</b><br>Test class: com.obsqura.testscripts.LoginPageTest<br>Parameters: Anu, admin</td>
+<td></td>
+<td>0</td>
+<td>com.obsqura.testscripts.LoginPageTest@2a448449</td></tr>
 <tr>
 <td title='com.obsqura.testscripts.ManagePagesTest.verifySearchfunctinality()'><b>verifySearchfunctinality</b><br>Test class: com.obsqura.testscripts.ManagePagesTest</td>
 <td></td>
 <td>1</td>
-<td>com.obsqura.testscripts.ManagePagesTest@18a136ac</td></tr>
+<td>com.obsqura.testscripts.ManagePagesTest@7203c7ff</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManagePaymentMethodsTest.verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable()'><b>verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable</b><br>Test class: com.obsqura.testscripts.ManagePaymentMethodsTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.ManagePaymentMethodsTest@25bfcafd</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageDeliveryBoyTest.verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage()'><b>verifyTitleListDeliveryBoyWhenNavigatetoTheManageDeliveryBoyPage</b><br>Test class: com.obsqura.testscripts.ManageDeliveryBoyTest</td>
+<td></td>
+<td>1</td>
+<td>com.obsqura.testscripts.ManageDeliveryBoyTest@4b6690c0</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageDeliveryBoyTest.verifynewDeliveryBoyDetailsUpdated()'><b>verifynewDeliveryBoyDetailsUpdated</b><br>Test class: com.obsqura.testscripts.ManageDeliveryBoyTest</td>
+<td></td>
+<td>5</td>
+<td>com.obsqura.testscripts.ManageDeliveryBoyTest@4b6690c0</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageUsersTest.verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow()'><b>verifythatWhenclickingPaaswordButtonPasswordIsShownInBelowRow</b><br>Test class: com.obsqura.testscripts.ManageUsersTest</td>
+<td></td>
+<td>1</td>
+<td>com.obsqura.testscripts.ManageUsersTest@eda25e5</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.AdminUsersTest.verifydropdownMenuWhenAddingUsersInformation()'><b>verifydropdownMenuWhenAddingUsersInformation</b><br>Test class: com.obsqura.testscripts.AdminUsersTest</td>
+<td></td>
+<td>1</td>
+<td>com.obsqura.testscripts.AdminUsersTest@71454b9d</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.AdminUsersTest.verifyAddingUsersInformations()'><b>verifyAddingUsersInformations</b><br>Test class: com.obsqura.testscripts.AdminUsersTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.AdminUsersTest@71454b9d</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageOfferCodeTest.verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully()'><b>verifyNewFunctinalityinOfferCodesListAndOffercodeUpdatedSuccessfully</b><br>Test class: com.obsqura.testscripts.ManageOfferCodeTest</td>
+<td></td>
+<td>3</td>
+<td>com.obsqura.testscripts.ManageOfferCodeTest@7cf6a5f9</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageSliderTest.verifyImageUploadedSuccesfully()'><b>verifyImageUploadedSuccesfully</b><br>Test class: com.obsqura.testscripts.ManageSliderTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.ManageSliderTest@46268f08</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageLocationTest.verifyEditFunctionality()'><b>verifyEditFunctionality</b><br>Test class: com.obsqura.testscripts.ManageLocationTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.ManageLocationTest@623e088f</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageLocationTest.verifyAddLocationInformations()'><b>verifyAddLocationInformations</b><br>Test class: com.obsqura.testscripts.ManageLocationTest</td>
+<td></td>
+<td>3</td>
+<td>com.obsqura.testscripts.ManageLocationTest@623e088f</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ExpenseCategoryTest.verifyWidthOfActionColumn()'><b>verifyWidthOfActionColumn</b><br>Test class: com.obsqura.testscripts.ExpenseCategoryTest</td>
+<td></td>
+<td>5</td>
+<td>com.obsqura.testscripts.ExpenseCategoryTest@2a76840c</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageSliderTest.verifyeditbuttonAllignedBeforeDeleteButton()'><b>verifyeditbuttonAllignedBeforeDeleteButton</b><br>Test class: com.obsqura.testscripts.ManageSliderTest</td>
+<td></td>
+<td>1</td>
+<td>com.obsqura.testscripts.ManageSliderTest@46268f08</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.PushNotificationsTest.verfyNotificationSentSuccessfully()'><b>verfyNotificationSentSuccessfully</b><br>Test class: com.obsqura.testscripts.PushNotificationsTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.PushNotificationsTest@1852a3ff</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageProductTest.verifyColorChangeofStockUnlimitedButtontoLimited()'><b>verifyColorChangeofStockUnlimitedButtontoLimited</b><br>Test class: com.obsqura.testscripts.ManageProductTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.ManageProductTest@93cf163</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageUsersTest.verifySearchFunctinality()'><b>verifySearchFunctinality</b><br>Test class: com.obsqura.testscripts.ManageUsersTest</td>
+<td></td>
+<td>1</td>
+<td>com.obsqura.testscripts.ManageUsersTest@eda25e5</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ExpenseCategoryTest.verifyRowCountofExpenseCategoryTable()'><b>verifyRowCountofExpenseCategoryTable</b><br>Test class: com.obsqura.testscripts.ExpenseCategoryTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.ExpenseCategoryTest@2a76840c</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.LoginPageTest.verifylogin()'><b>verifylogin</b><br>Test class: com.obsqura.testscripts.LoginPageTest<br>Parameters: user, ad43</td>
+<td></td>
+<td>1</td>
+<td>com.obsqura.testscripts.LoginPageTest@2a448449</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageLocationTest.verifySearchusingCountryAndState()'><b>verifySearchusingCountryAndState</b><br>Test class: com.obsqura.testscripts.ManageLocationTest</td>
+<td></td>
+<td>3</td>
+<td>com.obsqura.testscripts.ManageLocationTest@623e088f</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.LoginPageTest.verifyAlertMessageWithInvalidUsernameAndValidPassword()'><b>verifyAlertMessageWithInvalidUsernameAndValidPassword</b><br>Test class: com.obsqura.testscripts.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.obsqura.testscripts.LoginPageTest@2a448449</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageDeliveryBoyTest.verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed()'><b>verifythatWhenaddingNewDeliveryBoyduplicateUserNameisNotAllowed</b><br>Test class: com.obsqura.testscripts.ManageDeliveryBoyTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.ManageDeliveryBoyTest@4b6690c0</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.LoginPageTest.verifyLoginwithValidUsernameAndPassword()'><b>verifyLoginwithValidUsernameAndPassword</b><br>Test class: com.obsqura.testscripts.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.obsqura.testscripts.LoginPageTest@2a448449</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.AdminUsersTest.verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage()'><b>verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage</b><br>Test class: com.obsqura.testscripts.AdminUsersTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.AdminUsersTest@71454b9d</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.LoginPageTest.verifylogin()'><b>verifylogin</b><br>Test class: com.obsqura.testscripts.LoginPageTest<br>Parameters: admin, rev</td>
+<td></td>
+<td>0</td>
+<td>com.obsqura.testscripts.LoginPageTest@2a448449</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageUsersTest.verifyBackGroundColorOfAlert()'><b>verifyBackGroundColorOfAlert</b><br>Test class: com.obsqura.testscripts.ManageUsersTest</td>
+<td></td>
+<td>1</td>
+<td>com.obsqura.testscripts.ManageUsersTest@eda25e5</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManagePagesTest.verifyBackgroundColorOfNewButton()'><b>verifyBackgroundColorOfNewButton</b><br>Test class: com.obsqura.testscripts.ManagePagesTest</td>
+<td></td>
+<td>1</td>
+<td>com.obsqura.testscripts.ManagePagesTest@7203c7ff</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.AdminUsersTest.verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor()'><b>verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor</b><br>Test class: com.obsqura.testscripts.AdminUsersTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.AdminUsersTest@71454b9d</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageProductTest.verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane()'><b>verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane</b><br>Test class: com.obsqura.testscripts.ManageProductTest</td>
+<td></td>
+<td>1</td>
+<td>com.obsqura.testscripts.ManageProductTest@93cf163</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ExpenseCategoryTest.verifyAddingExpenseCategoryInformationswithDuplicateTitle()'><b>verifyAddingExpenseCategoryInformationswithDuplicateTitle</b><br>Test class: com.obsqura.testscripts.ExpenseCategoryTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.ExpenseCategoryTest@2a76840c</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageOfferCodeTest.verifySearchIfElementisNotPresent()'><b>verifySearchIfElementisNotPresent</b><br>Test class: com.obsqura.testscripts.ManageOfferCodeTest</td>
+<td></td>
+<td>2</td>
+<td>com.obsqura.testscripts.ManageOfferCodeTest@7cf6a5f9</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality()'><b>verifyDeleteFunctionality</b><br>Test class: com.obsqura.testscripts.ManageOfferCodeTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality(ManageOfferCodeTest.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace270653761", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace270653761'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality(ManageOfferCodeTest.java:55)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.obsqura.testscripts.ManageOfferCodeTest@7cf6a5f9</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageLocationTest.verifySearchusingCountryAndState()'><b>verifySearchusingCountryAndState</b><br>Test class: com.obsqura.testscripts.ManageLocationTest</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aae0325b40a8028cc4c4e872ee453d7b, isElementSelected {id=7135b1d4-926d-4418-9c88-5646f4556356}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62909/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on WINDOWS (aae0325b40a8028cc4c4e872ee453d7b)] -&gt; xpath: //select[@name=&apos;state_id&apos;]]] -&gt; xpath: .//option[normalize-space(.) = &quot;England&quot;]]
+Session ID: aae0325b40a8028cc4c4e872ee453d7b
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.isSelected(RemoteWebElement.java:185)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:319)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:119)
+	at utilities.PageUtility.selectDropdownbyText(PageUtility.java:49)
+	at com.obsqura.pages.ManageLocationPage.selectState(ManageLocationPage.java:79)
+	at com.obsqura.testscripts.ManageLocationTest.verifySearchusingCountryAndState(ManageLocationTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1610445420", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1610445420'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aae0325b40a8028cc4c4e872ee453d7b, isElementSelected {id=7135b1d4-926d-4418-9c88-5646f4556356}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62909/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on WINDOWS (aae0325b40a8028cc4c4e872ee453d7b)] -&gt; xpath: //select[@name=&apos;state_id&apos;]]] -&gt; xpath: .//option[normalize-space(.) = &quot;England&quot;]]
+Session ID: aae0325b40a8028cc4c4e872ee453d7b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.isSelected(RemoteWebElement.java:185)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:319)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:119)
+	at utilities.PageUtility.selectDropdownbyText(PageUtility.java:49)
+	at com.obsqura.pages.ManageLocationPage.selectState(ManageLocationPage.java:79)
+	at com.obsqura.testscripts.ManageLocationTest.verifySearchusingCountryAndState(ManageLocationTest.java:57)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.obsqura.testscripts.ManageLocationTest@623e088f</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageLocationTest.verifySearchusingCountryAndState()'><b>verifySearchusingCountryAndState</b><br>Test class: com.obsqura.testscripts.ManageLocationTest</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4000de980f2b159815a55988b505a9a, clickElement {id=97e936dc-b1c4-46c3-9e2b-e05d864f4300}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62868}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62868/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on WINDOWS (f4000de980f2b159815a55988b505a9a)] -&gt; xpath: //select[@name=&apos;state_id&apos;]]] -&gt; xpath: .//option[normalize-space(.) = &quot;England&quot;]]
+Session ID: f4000de980f2b159815a55988b505a9a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:320)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:119)
+	at utilities.PageUtility.selectDropdownbyText(PageUtility.java:49)
+	at com.obsqura.pages.ManageLocationPage.selectState(ManageLocationPage.java:79)
+	at com.obsqura.testscripts.ManageLocationTest.verifySearchusingCountryAndState(ManageLocationTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1894744924", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1894744924'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4000de980f2b159815a55988b505a9a, clickElement {id=97e936dc-b1c4-46c3-9e2b-e05d864f4300}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62868}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62868/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on WINDOWS (f4000de980f2b159815a55988b505a9a)] -&gt; xpath: //select[@name=&apos;state_id&apos;]]] -&gt; xpath: .//option[normalize-space(.) = &quot;England&quot;]]
+Session ID: f4000de980f2b159815a55988b505a9a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:320)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:119)
+	at utilities.PageUtility.selectDropdownbyText(PageUtility.java:49)
+	at com.obsqura.pages.ManageLocationPage.selectState(ManageLocationPage.java:79)
+	at com.obsqura.testscripts.ManageLocationTest.verifySearchusingCountryAndState(ManageLocationTest.java:57)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.obsqura.testscripts.ManageLocationTest@623e088f</td></tr>
+<tr>
+<td title='com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality()'><b>verifyDeleteFunctionality</b><br>Test class: com.obsqura.testscripts.ManageOfferCodeTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality(ManageOfferCodeTest.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace253043086", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace253043086'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.obsqura.testscripts.ManageOfferCodeTest.verifyDeleteFunctionality(ManageOfferCodeTest.java:55)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>com.obsqura.testscripts.ManageOfferCodeTest@7cf6a5f9</td></tr>
 </table><p>
 </body>
 </html>

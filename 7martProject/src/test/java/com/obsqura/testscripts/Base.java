@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.ScreenShotUtility;
+import utilities.UtilityFile;
 import utilities.WaitUtility;
 
 public class Base
@@ -31,38 +32,43 @@ public class Base
 	@Parameters({"browser"})
 	public  void initializeBrowser(String browser) throws Exception
 	{
-		
 		prop=new Properties();
-		try {
-			fs = new FileInputStream(System.getProperty("user.dir") +constants.Constants.CONFIGfILE);
-
-		} catch (Exception e) {
-			
+		try 
+		{
+		fs = new FileInputStream(UtilityFile.urlPath);
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
 		}
-		try {
-			prop.load(fs);
-		} catch (Exception e) {
-			
+		try 
+		{
+		prop.load(fs);
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
 		}
 		prop1=new Properties();
-
-		try {
-			fs = new FileInputStream(System.getProperty("user.dir") +constants.Constants.TESTDATAFILE);
-
-
-		} catch (Exception e) {
-			
+		try 
+		{
+		fs = new FileInputStream(UtilityFile.filepath);
+		} 
+		catch (Exception e)
+		{
+			e.printStackTrace();
 		}
-		try {
-
-			prop1.load(fs);
-		} catch (Exception e) {
-			
+		try 
+		{
+		prop1.load(fs);
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
 		}
 		if(browser.equalsIgnoreCase("firefox"))
 		{
 			driver = WebDriverManager.firefoxdriver().create();
-		
 		}
 			
 		else if(browser.equalsIgnoreCase("chrome"))
@@ -71,18 +77,14 @@ public class Base
 			chromeOptions.addArguments("--remote-allow-origins=*");
 			WebDriverManager.chromedriver().capabilities(chromeOptions).create();
 			driver = new ChromeDriver(chromeOptions);
-			
 		}
 			
 		else if(browser.equalsIgnoreCase("Edge"))
 		{
-			
-			
 			EdgeOptions edgeOptions = new EdgeOptions();
 			edgeOptions.addArguments("--remote-allow-origins=*");
 			WebDriverManager.edgedriver().capabilities(edgeOptions).create();
 			driver = new EdgeDriver(edgeOptions);
-			
 		}
 		else
 		{
@@ -100,10 +102,9 @@ public class Base
 	{
 		if (iTestResult.getStatus() == ITestResult.FAILURE) 
 		{
-			scrshot = new ScreenShotUtility();
-			scrshot.getScreenShot(driver, iTestResult.getName());
+		scrshot = new ScreenShotUtility();
+		scrshot.getScreenShot(driver, iTestResult.getName());
 		}
-		
 		driver.quit();
 	}
 	

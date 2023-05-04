@@ -21,7 +21,7 @@ public class ManageLocationTest extends Base
 	SelectMenu selectmenu;
 	
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyAddLocationInformations() throws IOException
+	public void verifyAddLocationInformations() 
 	{
 		String expectedAlert = ExcelUtility.getString(7, 0, UtilityFile.excelPath, "ManageLocation");
 		login = new Login(driver);
@@ -30,11 +30,10 @@ public class ManageLocationTest extends Base
 		selectmenu = new SelectMenu(driver);
 		selectmenu.navigateToPage(ExcelUtility.getString(9, 0, UtilityFile.excelPath, "SelectMenu"));
 		managelocationpage.clickNewButton().selectCountry().selectState().enterLocation().enterDeliveryCharge().clickSaveButton();
-		//System.out.println(managelocationpage.alertElementText());
 		assertEquals(expectedAlert,managelocationpage.alertElementText(),"location cannot be created");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyEditFunctionality() throws IOException
+	public void verifyEditFunctionality() 
 	{
 		String expectedAlert = ExcelUtility.getString(9, 0, UtilityFile.excelPath, "ManageLocation");
 		login = new Login(driver);
@@ -47,7 +46,7 @@ public class ManageLocationTest extends Base
 		assertEquals(expectedAlert,managelocationpage.alertElementText(),"location cannot be updated");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifySearchusingCountryAndState() throws IOException
+	public void verifySearchusingCountryAndState() 
 	{
 		String searchElement = ExcelUtility.getString(1, 1, UtilityFile.excelPath, "ManageLocation");
 		login = new Login(driver);

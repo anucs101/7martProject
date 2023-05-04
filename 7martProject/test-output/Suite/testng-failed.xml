@@ -5,15 +5,22 @@
     <listener class-name="generaltests.Listener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="com.obsqura.testscripts.ManagePagesTest">
+      <class name="com.obsqura.testscripts.ManageOfferCodeTest">
         <methods>
           <include name="initializeBrowser"/>
-          <include name="verifyBackgroundColorOfNewButton"/>
+          <include name="verifyDeleteFunctionality"/>
           <include name="browserQuit"/>
         </methods>
-      </class> <!-- com.obsqura.testscripts.ManagePagesTest -->
+      </class> <!-- com.obsqura.testscripts.ManageOfferCodeTest -->
+      <class name="com.obsqura.testscripts.ManageLocationTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifySearchusingCountryAndState"/>
+          <include name="browserQuit"/>
+        </methods>
+      </class> <!-- com.obsqura.testscripts.ManageLocationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

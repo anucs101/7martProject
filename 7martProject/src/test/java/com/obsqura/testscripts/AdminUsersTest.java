@@ -22,7 +22,7 @@ public class AdminUsersTest extends Base
 	Login login;
 	SelectMenu selectmenu;
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage() throws IOException
+	public void verifyWhenClickingHomeinAdminUsersPageitgoestoDashBoardPage() 
 	{
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
@@ -33,7 +33,7 @@ public class AdminUsersTest extends Base
 		assertTrue(adminuserspage.expectedElementIsPresent(),"cannot navigate to dashboard");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifydropdownMenuWhenAddingUsersInformation() throws IOException
+	public void verifydropdownMenuWhenAddingUsersInformation() 
 	{
 		ArrayList<String> expectedDropdownMenuOptions = ExcelUtility.getRow(System.getProperty("user.dir")+constants.Constants.EXCELFILE, "Adminusers", 3);
 		login = new Login(driver);
@@ -45,7 +45,7 @@ public class AdminUsersTest extends Base
 		assertTrue(expectedDropdownMenuOptions.equals(adminuserspage.dropdownMenuOptionsList()));
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyDeleteFunctionalityAndCheckAlert() throws IOException
+	public void verifyDeleteFunctionalityAndCheckAlert() 
 	{
 		String expectedAlert = ExcelUtility.getString(7, 0,UtilityFile.excelPath,"Adminusers");
 		login = new Login(driver);
@@ -58,7 +58,7 @@ public class AdminUsersTest extends Base
 		
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyAddingUsersInformations() throws IOException
+	public void verifyAddingUsersInformations() 
 	{
 		String expectedAlert = ExcelUtility.getString(10, 1,UtilityFile.excelPath,"Adminusers");
 		login = new Login(driver);
@@ -70,7 +70,7 @@ public class AdminUsersTest extends Base
 		assertEquals(expectedAlert,adminuserspage.alertElementText(),"could not add new user");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor() throws IOException
+	public void verifyUnlockButtonChangesStatusofUserbyCheckingBackgroundColor() 
 	{
 		String expectedBackgroundColor = ExcelUtility.getString(13, 1,UtilityFile.excelPath,"Adminusers");
 		login = new Login(driver);

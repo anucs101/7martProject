@@ -20,7 +20,7 @@ public class ManagePaymentMethodsTest extends Base
 	ManagePaymentMethodsPage managepaymentmethodspage;
 	SelectMenu selectmenu;
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifytableheadersofManagePaymentMethods() throws IOException
+	public void verifytableheadersofManagePaymentMethods() 
 	{
 		ArrayList<String> expectedTableHeaders = ExcelUtility.getRow(UtilityFile.excelPath, "ManagePaymentMethods", 3);
 		login = new Login(driver);
@@ -31,7 +31,7 @@ public class ManagePaymentMethodsTest extends Base
 		assertTrue(expectedTableHeaders.equals(managepaymentmethodspage.tableHeadersList()),"Table headers are not matching as expected");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable() throws IOException
+	public void verifythatEditchangesInPaylimitUpdatedInManagePaymentMethodsTable() 
 	{
 		String payLimitValue = ExcelUtility.getNumeric(0, 1,UtilityFile.excelPath,"ManagePaymentMethods");
 		login = new Login(driver);

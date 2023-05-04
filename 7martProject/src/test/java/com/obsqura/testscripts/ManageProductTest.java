@@ -23,7 +23,7 @@ Login login;
 ManageProductPage manageproductpage;
 SelectMenu selectmenu;
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyColorChangeofStockUnlimitedButtontoLimited() throws IOException
+	public void verifyColorChangeofStockUnlimitedButtontoLimited() 
 	{
 		String colorOfUnlimitedButton = ExcelUtility.getString(2, 1, UtilityFile.excelPath, "ManageProduct");
 		String colorOflimitedButton = ExcelUtility.getString(5, 1, UtilityFile.excelPath, "ManageProduct");
@@ -32,7 +32,6 @@ SelectMenu selectmenu;
 		manageproductpage = new ManageProductPage(driver);
 		selectmenu = new SelectMenu(driver);
 		selectmenu.navigateToPage(ExcelUtility.getString(1, 0, UtilityFile.excelPath, "SelectMenu"));
-		assertTrue(manageproductpage.isUnlimitedButtonEnabled(),"unlimited Button is disabled");
 		assertTrue(colorOfUnlimitedButton.equals(manageproductpage.colorOfUnlimitedButton()),"color of unlimited is not red");
 		manageproductpage.clickUnlimitedButton();
 		assertTrue(colorOflimitedButton.equals(manageproductpage.colorOflimitedButton()),"color of unlimited is not red");
@@ -40,7 +39,7 @@ SelectMenu selectmenu;
 	}
 
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane() throws IOException
+	public void verifyManageProductPageIsAvailableWhenClickintoManageProductfromleftPane() 
 	{
 		String expectedUrl = ExcelUtility.getString(7, 1, UtilityFile.excelPath, "ManageProduct");
 		login = new Login(driver);

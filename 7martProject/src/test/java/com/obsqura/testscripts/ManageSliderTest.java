@@ -20,7 +20,7 @@ public class ManageSliderTest extends Base
 	ManageSliderPage managesliderpage;
 	SelectMenu selectmenu;
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyeditbuttonAllignedBeforeDeleteButton() throws IOException
+	public void verifyeditbuttonAllignedBeforeDeleteButton() 
 	{
 		login = new Login(driver);
 		login.verifyLoginwithValidcredentials();
@@ -30,7 +30,7 @@ public class ManageSliderTest extends Base
 		assertTrue(managesliderpage.xAxisLocationofEditButton()<managesliderpage.xAxisLocationOfDeleteButton(),"allignments are not correct");
 	}
 	@Test(retryAnalyzer = generaltests.Retry.class)
-	public void verifyImageUploadedSuccesfully() throws IOException
+	public void verifyImageUploadedSuccesfully() 
 	{
 		String expectedAlert = ExcelUtility.getString(3, 1, UtilityFile.excelPath, "ManageSlider");
 		login = new Login(driver);
